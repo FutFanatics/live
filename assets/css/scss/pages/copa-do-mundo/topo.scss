@@ -1,0 +1,76 @@
+.topo {
+    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/copa-do-mundo/1-bem-vindo/topo-desk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #DBDBBF;
+    padding: 130px 0 150px 1px;
+    @include for-phone-only {
+        background-position: top;
+        background-size: contain;
+        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/copa-do-mundo/1-bem-vindo/topo-mob.png');
+        padding: 40px 15px ;
+    }
+
+    .row {
+        @include for-phone-only {
+            flex-direction: column-reverse;
+            .col-md-7 {
+                padding: 110px 0;
+            }
+        }
+    }
+   
+    h2 {
+        margin-top: 30px;
+        width: 80%;
+        @include font(#000, 700, 36px, 120%);
+    }
+
+    p {
+        margin-top: 20px;
+        @include font(#000, 400, 16px, 150%);
+        
+        b {
+            font-weight: 600;
+        }
+    }
+    
+    &__tags {
+        flex-wrap: wrap;
+        span {
+            border: 1px solid #000;
+            border-radius: 7px;
+            padding: 5px;
+            margin: 5px;
+            &:hover {
+                background-color: #000;
+                color: #FFF;
+                cursor: pointer;
+            }
+            @include font(#000, 400, 16px, 150%);
+        }
+    }
+
+    &__down {
+        width: 100%;
+        display: block;
+        position: relative;
+        bottom: -100px;
+        @include for-phone-only {
+            bottom: -20px;
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+            i {
+                display: block;
+                margin: 0 auto;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 40px;
+                text-align: center;
+            }
+        }
+    }
+}

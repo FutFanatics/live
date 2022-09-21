@@ -1,0 +1,76 @@
+* {
+    font-family: 'Gotham';
+}
+
+$green_acqua: #22E3C3;
+$blue_release: #0E3AFF;
+$blue_dark_lp: #0A0961;
+$blue_light_lp: #020987;
+$blue_lighter: #0B1F97;
+
+.slick-dots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 41.66666667%;
+    margin-top: -30px;
+    button {
+        font-size: 0;
+        width: 20px;
+        height: 5px;
+        border-radius: 4px;
+        border: 0;
+        margin: 0 5px;
+        outline: none;
+        transition: all .2s ease;
+        
+        opacity: 0.25;
+    }
+
+    li.slick-active {
+        button {
+            opacity: 0.7;
+            width: 40px;
+        }
+    }
+}
+
+
+@mixin font($txtColor, $weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $txtColor;
+}
+  
+/******************/
+/* MEDIAS QUERIES */
+/******************/
+
+@mixin for-phone-only {
+    @media (max-width: 767px) { @content; }
+}
+  
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; }
+}
+  
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin scrolllayout {
+    &::-webkit-scrollbar-track {
+        background-color: #ffffff;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(196, 196, 196);
+        border-radius: 4px;
+    }
+}
+  

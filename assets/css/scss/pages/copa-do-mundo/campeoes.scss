@@ -1,0 +1,107 @@
+.campeoes {
+    @include for-phone-only {
+        padding: 0;
+        .container {
+            padding: 0;
+            
+        }
+    }
+    &__box {
+        background: #295641;
+        padding: 20px 40px;
+        border-radius: 15px;
+        @include for-phone-only {
+            padding: 0;
+            border-radius: 0;
+            .col-md-5 {
+                padding: 20px 40px;
+            }
+        }
+    }
+
+    &__title {
+        @include font(#FFF, 700, 34px, 48px);
+    }
+    &__description {
+        margin-top: 20px;
+        width: 95%;
+        @include for-phone-only {
+            width: 100%;
+        }
+        p {
+            @include font(#FFF, 400, 16px, 28px);
+            margin-top: 0;
+            @include for-phone-only {
+                @include font(#FFF, 400, 13px, 150%);
+                text-align: justify;
+            }
+        }
+    }
+    &__times {
+        justify-content: flex-end;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-bottom: 40px;
+        @include for-phone-only {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: scroll;
+        }
+        .item {
+            background: #F1F1F1;
+            border: 1px solid #FFFFFF;
+            padding: 15px 20px 10px;
+            border-radius: 15px;
+            padding: 1;
+            margin: 5px;
+            width: 150px;
+            @include for-phone-only {
+                min-width: 150px;
+            }
+            @media (max-width: 1400px) { 
+                padding: 15px 10px 10px;
+                margin: 7px;
+                width: 120px;
+            }
+            &-escudo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .img {
+                    width: 100px;
+                    @media (max-width: 1400px) { 
+                        width: 80px;
+                    }
+                }
+            }
+
+            &-content {
+                background-color: #ECD39C;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 8px;
+                margin-top: 20px;
+                &-title {
+                    text-align: left;
+                    margin-top: 10px;
+                    padding: 0 10px;
+                    @include font(#000, bold, 12px, 14px);
+
+                    @media (max-width: 14000px) { 
+                        padding: 0 5px;
+                    }
+                }
+                &-count {
+                    background: #FFFFFF;
+                    border-radius: 8px;
+                    padding: 0 10px;
+                    @include font(#000, bold, 15px, 14px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

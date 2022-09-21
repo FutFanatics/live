@@ -1,0 +1,30 @@
+.artilheiros {
+    background-color: #344A70;
+    padding: 75px 0 115px;
+    @include for-phone-only {
+        padding: 50px 0 35px 30px;
+    }
+    &__title {
+        @include font(#FFF, 700, 32px, 38px);
+        padding-bottom: 75px;
+    }
+    .col-12 {
+        padding: 0;
+    }
+    .d-flex {
+        justify-content: space-between;
+        @include for-phone-only {
+            width: 100%;
+            overflow-x: scroll;
+        }
+        .item {
+            padding: 10px;
+            @include for-phone-only {
+                padding: 0 15px 0 0;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.timeline {
+    background: #d6d6d6;
+    padding: 50px 0;
+    &__slick {
+        .col-12 {
+            padding: 4px;
+        }
+        .item {
+            &__box {
+                background: #FFF;
+                border-radius: 15px;
+                padding: 15px;
+                height: 100%;
+            }
+            &__boxfull {
+                background: #FFF;
+                border-radius: 15px;
+                padding: 15px;
+            }
+            &__boxhalf {
+                width: 100%;
+                display: flex;
+                &-box {
+                    background: #FFF;
+                    border-radius: 15px;
+                    padding: 15px;
+                    width: 50%;
+                    margin: 8px 4px;
+                    padding: 15px;
+                }
+            }
+            &__campeao {
+                background-color: #ECD39C;
+                img {
+                    max-width: 100%;
+                }
+                &-subtitle {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #222222;
+                }
+                &-title {
+                    font-weight: bold;
+                    font-size: 36px;
+                    line-height: 43px;
+                    text-align: center;
+                    color: #222222;
+                }
+                &-placar {
+                    font-weight: 350;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #222222;
+                    padding: 5px;
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 5px;
+                }
+            }
+            &__chuteira {
+                &-img {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &-info {
+                    h5 {
+
+                    }
+                    h2 {
+
+                    }
+                    span {
+
+                    }
+                }
+            }
+            &__bola {
+                img {
+                    width: 100%;
+                }
+            }
+            &__country {
+                &-subtitle {
+                    font-weight: 325;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #222222;
+                }
+                &-title {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-align: center;
+                    color: #222222;
+                }
+            }
+        }
+    }
+}
