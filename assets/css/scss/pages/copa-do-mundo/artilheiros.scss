@@ -21,6 +21,7 @@
             padding: 10px;
             @include for-phone-only {
                 padding: 0 15px 0 0;
+                min-width: 40%;
             }
             img {
                 width: 100%;

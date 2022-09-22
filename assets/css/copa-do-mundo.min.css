@@ -1185,7 +1185,8 @@ html .botao-lancamento {
       padding: 10px; }
       @media (max-width: 767px) {
         .artilheiros .d-flex .item {
-          padding: 0 15px 0 0; } }
+          padding: 0 15px 0 0;
+          min-width: 40%; } }
       .artilheiros .d-flex .item img {
         width: 100%; }
 
