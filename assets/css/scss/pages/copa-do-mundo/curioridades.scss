@@ -12,12 +12,19 @@
         @include for-phone-only {
             font-size: 28px;
             line-height: 32px;
+            padding: 0 20px;
         }
     }
     &__slick {
         margin-top: 35px;
         display: flex;
         justify-content: space-between;
+
+        @include for-phone-only {
+            max-width: 100%;
+            overflow-x: scroll;
+            padding: 0 20px;
+        }
         .contain {
             display: flex !important;
             flex-wrap: wrap;
@@ -27,14 +34,17 @@
         }
         .item {
             padding: 0 15px 0 15px;
+            @include for-phone-only {
+                padding: 0 5px;
+            }
             &-box {
                 border-radius: 10px;
                 background-color: #F1F1F1;
-                max-width: 288px;
-                // width: 288px;
-                // min-height: 305px;
                 height: 100%;
-                //padding: 17.5px;
+
+                @include for-phone-only {
+                    min-width: 288px;
+                }
             }
             &-img {
                 &-thumb {

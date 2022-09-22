@@ -38,14 +38,27 @@
         .slick-dots {
             width: 41.66666667%;
             float: right;
-            button {
-                background: #000;
+
+            @include for-phone-only {
+                margin-top: 5px;
+                max-width: 100%;
+                width: 100%;
+                justify-content: center;
+                float: none;
             }
 
-            li.slick-active {
+            li {
                 button {
-                    opacity: 0.7;
-                    width: 40px;
+                    background: #000;
+                    @include for-phone-only {
+                        width: 10px;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        opacity: 0.7;
+                        width: 40px;
+                    }
                 }
             }
         }
@@ -107,11 +120,7 @@
                     }
                 }
             }
-            .slick-dots {
-                margin-top: 5px;
-                width: 100%;
-                justify-content: center;
-            }
+            
         }
     }
 }

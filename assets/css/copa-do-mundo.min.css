@@ -992,8 +992,18 @@ html .botao-lancamento {
   .historia__slick .slick-dots {
     width: 41.66666667%;
     float: right; }
-    .historia__slick .slick-dots button {
+    @media (max-width: 767px) {
+      .historia__slick .slick-dots {
+        margin-top: 5px;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        float: none; } }
+    .historia__slick .slick-dots li button {
       background: #000; }
+      @media (max-width: 767px) {
+        .historia__slick .slick-dots li button {
+          width: 10px; } }
     .historia__slick .slick-dots li.slick-active button {
       opacity: 0.7;
       width: 40px; }
@@ -1045,11 +1055,7 @@ html .botao-lancamento {
           font-weight: 600;
           font-size: 18px;
           line-height: 200%;
-          color: #000; }
-    .historia__slick .slick-dots {
-      margin-top: 5px;
-      width: 100%;
-      justify-content: center; } }
+          color: #000; } }
 
 @media (max-width: 767px) {
   .campeoes {
@@ -1253,11 +1259,17 @@ html .botao-lancamento {
     @media (max-width: 767px) {
       .curiosidade__title {
         font-size: 28px;
-        line-height: 32px; } }
+        line-height: 32px;
+        padding: 0 20px; } }
   .curiosidade__slick {
     margin-top: 35px;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 767px) {
+      .curiosidade__slick {
+        max-width: 100%;
+        overflow-x: scroll;
+        padding: 0 20px; } }
     .curiosidade__slick .contain {
       display: flex !important;
       flex-wrap: wrap;
@@ -1266,11 +1278,16 @@ html .botao-lancamento {
       gap: 20px; }
     .curiosidade__slick .item {
       padding: 0 15px 0 15px; }
+      @media (max-width: 767px) {
+        .curiosidade__slick .item {
+          padding: 0 5px; } }
       .curiosidade__slick .item-box {
         border-radius: 10px;
         background-color: #F1F1F1;
-        max-width: 288px;
         height: 100%; }
+        @media (max-width: 767px) {
+          .curiosidade__slick .item-box {
+            min-width: 288px; } }
       .curiosidade__slick .item-img-thumb img {
         width: 100%; }
       .curiosidade__slick .item-img-escudo {
