@@ -1,18 +1,36 @@
 .artilheiros {
-    background-color: #344A70;
-    padding: 75px 0 115px;
+    padding: 75px 0 100px;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 65%;
+        width: 100%;
+        background-color: $color-primary;
+        content: '';
+        z-index: -1;
+    }
     @include for-phone-only {
         padding: 50px 0 35px 30px;
     }
     &__title {
         @include font(#FFF, 700, 32px, 38px);
-        padding-bottom: 75px;
+        padding-bottom: 40px;
+        
+    }
+    .row{
+        padding: 60px 50px;
+        background-color: $color-secondary;
+        border-radius: 20px;
     }
     .col-12 {
         padding: 0;
     }
     .d-flex {
         justify-content: space-between;
+        margin-bottom: 25px;    
         @include for-phone-only {
             width: 100%;
             overflow-x: scroll;

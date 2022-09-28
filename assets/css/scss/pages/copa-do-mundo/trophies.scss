@@ -1,0 +1,143 @@
+ .c-trophies{
+    position: relative;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &::before{
+        position: absolute;
+        height: 50%;
+        content: '';
+        background-color: $color-primary;
+        width: 100%;
+        top: 0;
+        left:0;
+        z-index: -1;
+    }
+    .container__trophies{
+        background-color: #483430;
+        border-radius: 20px;
+        min-height: 512px;
+
+        @include for-phone-only {
+            width: 90%;
+        }
+
+        .row{
+            padding: 0px 40px;
+
+            @include for-phone-only {
+                padding: 0px 25px;
+            }
+
+            .box-text{
+                padding-right: 35px;
+                padding-top: 15px;
+
+                @include for-phone-only {
+                    padding-right: 0px;
+                    padding-left: 0px;
+                    padding-top: 50px;
+                }
+
+                .trophies-text{
+                    color: #fff;
+                    font-family: "Gotham";
+                    
+                    &__title{
+                        font-size: 25px;
+                        font-weight: 600;
+                        margin-bottom: 16px;
+                    }
+                    &__paragraph{
+                        font-size: 16px;
+                        line-height: 1.6rem;
+                        letter-spacing: 1px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .img-box{
+                position: relative;
+                min-height: 450px;
+
+                @include for-phone-only {
+                    min-height: 300px;
+                    margin-top: 15px;
+                    margin-bottom: 30px;
+                }
+                .trophie{
+                    position: absolute;
+                    object-fit: contain;
+                    height:270px;
+
+                    @include for-phone-only {
+                        height: 180px;
+                    }
+
+                    &__blue{
+                        top: 0;
+                        left: 0;
+                        animation: blue-down 8s  linear infinite;
+
+                        @keyframes blue-down {
+                            0%{
+                                transform: translateY(0);
+                            }
+                            25%{
+                                transform: translateY(25px);
+                            }
+                            50%{
+                                transform: translateY(50px);
+                            }
+                            75%{
+                                transform: translateY(25px);
+                            }
+                            100%{
+                                transform: translateY(0);
+                            }  
+                        }
+
+                        @include for-phone-only {
+                            animation: none;
+
+                        }
+                    }
+                    &__green{
+                        bottom: 0;
+                        right: 10%;
+                        animation: green-up 8s linear infinite; 
+                        
+                        @keyframes green-up {
+                            0%{
+                                transform: translateY(0);
+                            }
+                            25%{
+                                transform: translateY(-25px);
+                            }
+                            50%{
+                                transform: translateY(-50px);
+                            }
+                            75%{
+                                transform: translateY(-25px);
+                            }
+                            100%{
+                                transform: translateY(0);
+                            }                            
+                        }
+                        @include for-phone-only {
+                            right: 0;
+                            animation: none;
+                        }
+                    }                   
+                   
+                }
+            }
+            
+        }
+    }
+    
+ }

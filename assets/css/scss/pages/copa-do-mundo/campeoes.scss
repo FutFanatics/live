@@ -1,10 +1,24 @@
 .campeoes {
+    position: relative;
+    &::before{
+        position: absolute;
+        background-color: #F4F4F4;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 70%;
+        width: 100%;
+        z-index: -1;
+    }
     @include for-phone-only {
         padding: 0;
         .container {
             padding: 0;
             
         }
+    }
+    .box-text-champions{
+        
     }
     &__box {
         background: #295641;
@@ -23,14 +37,17 @@
         @include font(#FFF, 700, 34px, 48px);
     }
     &__description {
-        margin-top: 20px;
-        width: 95%;
+        margin-top: 10px;
+        width: 100%;
         @include for-phone-only {
             width: 100%;
         }
         p {
-            @include font(#FFF, 400, 16px, 28px);
+            color: #FFF;
+            font-weight: 400;
+            line-height: 1.6rem;
             margin-top: 0;
+            margin-bottom: 0;
             @include for-phone-only {
                 @include font(#FFF, 400, 13px, 150%);
                 text-align: justify;
@@ -41,8 +58,7 @@
         justify-content: flex-end;
         width: 100%;
         flex-wrap: wrap;
-        padding-left: 20px;
-        padding-bottom: 40px;
+        padding: 40px 0px;
         @include for-phone-only {
             flex-wrap: nowrap;
             justify-content: flex-start;
@@ -53,16 +69,25 @@
             border: 1px solid #FFFFFF;
             padding: 15px 20px 10px;
             border-radius: 15px;
-            padding: 1;
-            margin: 5px;
-            width: 150px;
+            padding: 15px 10px;
+            margin: 7px;
+            width: 22%;
+            max-height: 175px;
+            position: relative;
             @include for-phone-only {
                 min-width: 150px;
             }
-            @media (max-width: 1400px) { 
-                padding: 15px 10px 10px;
-                margin: 7px;
-                width: 120px;
+
+            &::before{
+                position: absolute;
+                background-color: #FFF;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 40%;
+                border-radius: 15px 15px 0px 0px;
+                width: 100%;
+                
             }
             &-escudo {
                 width: 100%;
@@ -70,8 +95,9 @@
                 justify-content: center;
                 .img {
                     width: 100px;
+                    z-index: 2;
                     @media (max-width: 1400px) { 
-                        width: 80px;
+                        width: 90px;
                     }
                 }
             }
