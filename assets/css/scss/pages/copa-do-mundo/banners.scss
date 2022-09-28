@@ -34,17 +34,9 @@
             justify-content: space-between;
             padding: 15px 30px;
             text-decoration: none;
-            background-color: #272727;
-            &:hover  {
-                background-color: #000;
-                span {
-                    color: #838383;
-                    opacity: 1;
-                }
-                i {
-                    color: #838383;
-                }
-            }
+            background-color: #000;
+            color: #272727;
+
             span {
                 font-weight: 500;
                 color: #FFFFFF;
@@ -55,9 +47,23 @@
                 width: 24px;
                 height: 24px;
                 font-size: 28px;
-                color: #FFFFFF;
+                color: #838383;
                 opacity: 0.5;
+                transform: rotate(-90deg);
             }
+            
+            &:hover  {
+                background-color: #FFF;
+                span {
+                    color: #272727;
+                    opacity: 1;
+                }
+                i {
+                    color: #000;
+                    
+                }
+            }
+            
         }
     }
 }

@@ -1,5 +1,5 @@
 .artilheiros {
-    padding: 75px 0 100px;
+    padding: 75px 0 50px;
     position: relative;
 
     &::before{
@@ -14,16 +14,29 @@
     }
     @include for-phone-only {
         padding: 50px 0 35px 30px;
+        background-color: $color-secondary;
     }
     &__title {
         @include font(#FFF, 700, 32px, 38px);
         padding-bottom: 40px;
-        
+
+        @include for-phone-only{
+            font-size: 40px;
+            width: 70%;
+            letter-spacing: 1px;
+            line-height: 3rem;
+            font-weight: 600;
+        }        
     }
     .row{
         padding: 60px 50px;
         background-color: $color-secondary;
         border-radius: 20px;
+
+        @include for-phone-only {
+            background-color: transparent;
+            padding: 0;
+        }
     }
     .col-12 {
         padding: 0;
@@ -38,11 +51,22 @@
         .item {
             padding: 10px;
             @include for-phone-only {
-                padding: 0 15px 0 0;
-                min-width: 40%;
+                padding: 0 ;
+                margin-left: 15px;
+
+                &:first-child{
+                    margin-left: 0;
+                }
             }
             img {
+                object-fit: contain;
                 width: 100%;
+
+                @include for-phone-only{
+                    min-height: 350px;
+                    width: auto;
+                }
+                
             }
         }
     }

@@ -18,7 +18,7 @@
         }
     }
     .box-text-champions{
-        
+        padding: 35px 0px;
     }
     &__box {
         background: #295641;
@@ -26,6 +26,7 @@
         border-radius: 15px;
         @include for-phone-only {
             padding: 0;
+            padding-top: 32px;
             border-radius: 0;
             .col-md-5 {
                 padding: 20px 40px;
@@ -35,9 +36,13 @@
 
     &__title {
         @include font(#FFF, 700, 34px, 48px);
+
+        @include for-phone-only{
+            @include font(#fff, 700, 40px, 3rem);
+        }
     }
     &__description {
-        margin-top: 10px;
+        margin-top: 20px;
         width: 100%;
         @include for-phone-only {
             width: 100%;
@@ -49,7 +54,7 @@
             margin-top: 0;
             margin-bottom: 0;
             @include for-phone-only {
-                @include font(#FFF, 400, 13px, 150%);
+                font-size: 16px; 
                 text-align: justify;
             }
         }
@@ -75,6 +80,7 @@
             max-height: 175px;
             position: relative;
             @include for-phone-only {
+                width: 100%;
                 min-width: 150px;
             }
 

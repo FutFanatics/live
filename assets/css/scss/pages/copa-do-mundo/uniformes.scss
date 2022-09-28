@@ -2,6 +2,20 @@
     padding: 60px 0 100px;
     background-color: #FFF;
 
+    .title-uniforme{
+        color: #000;
+        font-weight: 700;
+        font-family: "Gotham";
+        font-size: 34px;
+        margin-bottom: 0;
+
+        @include for-phone-only{
+            padding-left: 10px;
+            margin-top: 0;
+        }
+        
+    }
+
     &-slick {
 
         .item {
@@ -13,23 +27,24 @@
                 color: white;
             }
             &-time {
-                margin-top: 40px;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 22px;
-                color: $green_acqua;
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 1.5rem;
+                color: #000;
             }
             &-description {
                 p {
                     font-weight: 400;
-                    font-size: 14px;
-                    line-height: 200%;
-                    color: white;
+                    font-size: 16px;
+                    line-height: 1.5rem;
+                    color: #000;
                 }
             }
             &-img {
                 img {
                     width: 100%;
+                    border-radius: 10px;
                 }
             }
         }
