@@ -83,6 +83,10 @@
                         left: 0;
                         animation: blue-down 8s  linear infinite;
 
+                        @include lg{
+                            left: 10%;
+                        }
+
                         @keyframes blue-down {
                             0%{
                                 transform: translateY(0);
@@ -110,6 +114,10 @@
                         bottom: 0;
                         right: 10%;
                         animation: green-up 8s linear infinite; 
+
+                        @include lg{
+                            right: 15%;
+                        }
                         
                         @keyframes green-up {
                             0%{
@@ -140,4 +148,7 @@
         }
     }
     
- }
+}
+ 
+
+ 

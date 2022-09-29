@@ -1,4 +1,14 @@
 .bola {
+    @include for-phone-only{
+        background-color: #F4F4F4;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .title-mobile{
+        font-weight: 700    ;
+        font-size: 34px;
+        justify-content:center;
+    }
     &__slick {
         width: 100%;
         
@@ -14,6 +24,10 @@
                 border-radius: 15px;
                 padding: 35px;
                 height: 100%;
+
+                @include for-phone-only{
+                    padding: 20px;
+                }
             }
 
             &__bola {
@@ -23,17 +37,52 @@
                 }
             }
             &__description {
+                position: relative;
+                .icon_pesquisa{
+                    display: none;
+                    @include for-phone-only{
+                        display: block;
+                        position: absolute;
+                        right: 5%;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                        width: 30px;
+                    }
+                }
                 &-subtitle {
                     @include font(#222222, 400, 24px, 29px);
+                    @include for-phone-only{
+                        margin-bottom: 0;
+                        @include font(#222222, 400, 24px, 1.5rem);
+                    }
                 }
                 &-title {
-                    @include font(#222222, bold, 36px, 43px);
+                    @include font(#222222, bold, 30px, 2.5rem);
                 }
                 &-text {
-                    max-height: 250px;
+                    max-height: 180px;
                     overflow-y: scroll;
                     padding-right: 10px;
-                    @include scrolllayout;
+
+                    &::-webkit-scrollbar {
+                        width: 7px;
+                      }
+                      
+                      &::-webkit-scrollbar-track {
+                        background: #FFF;   
+                        border-radius: 20px; 
+                        border: 2px solid #E8E8E8;
+                      }
+                      
+                      &::-webkit-scrollbar-thumb {
+                        background-color: #222222; 
+                        border-radius: 20px;
+                        
+                      }
+                    @include for-phone-only{
+                        display: none
+                    }
+                
                     p {
                         @include font(#222222, 300, 14px, 160%);
                         text-align: justify;
@@ -41,11 +90,43 @@
                 }
             }
             &__gomos {
-                &-title {
-                    @include font(#222222, bold, 36px, 43px);
+                position: relative;
+                .icon_pesquisa{
+                    display: none;
+                    @include for-phone-only{
+                        display: block;
+                        position: absolute;
+                        right: 5%;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                        width: 30px;
+                    }
+                    
                 }
+                &-title {
+                    @include font(#222222, bold, 30px, 2.5rem);
+                    display: flex;
+                    justify-content: center;
+
+                    @include for-phone-only{
+                        justify-content: start;
+                    }
+                }
+                .box-image__gomos{
+                    width: 100%;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    height: 200px;
+
+                    @include for-phone-only{
+                        display: none;
+                    }
+                }
+                
                 &-img {
                     max-width: 100%;
+                    object-fit: contain;
                 }
             }
         }

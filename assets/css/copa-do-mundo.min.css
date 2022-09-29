@@ -1356,8 +1356,13 @@ html {
     border-radius: 0;
   }
   .campeoes__box .col-md-5 {
-    padding: 20px 40px;
+    padding: 20px 30px;
   }
+}
+.campeoes__box .row_campeoes {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 .campeoes__title {
   font-weight: 700;
@@ -1484,7 +1489,7 @@ html {
 }
 
 .artilheiros {
-  padding: 75px 0 50px;
+  padding: 50px 0 50px;
   position: relative;
 }
 .artilheiros::before {
@@ -1801,6 +1806,18 @@ html {
     font-weight: 900;
   }
 }
+@media (max-width: 767px) {
+  .bola {
+    background-color: #F4F4F4;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.bola .title-mobile {
+  font-weight: 700;
+  font-size: 34px;
+  justify-content: center;
+}
 .bola__slick {
   width: 100%;
 }
@@ -1817,11 +1834,32 @@ html {
   padding: 35px;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .bola__slick .item__box {
+    padding: 20px;
+  }
+}
 .bola__slick .item__bola {
   padding: 60px;
 }
 .bola__slick .item__bola img {
   width: 100%;
+}
+.bola__slick .item__description {
+  position: relative;
+}
+.bola__slick .item__description .icon_pesquisa {
+  display: none;
+}
+@media (max-width: 767px) {
+  .bola__slick .item__description .icon_pesquisa {
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 30px;
+  }
 }
 .bola__slick .item__description-subtitle {
   font-weight: 400;
@@ -1829,30 +1867,42 @@ html {
   line-height: 29px;
   color: #222222;
 }
+@media (max-width: 767px) {
+  .bola__slick .item__description-subtitle {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5rem;
+    color: #222222;
+  }
+}
 .bola__slick .item__description-title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 30px;
+  line-height: 2.5rem;
   color: #222222;
 }
 .bola__slick .item__description-text {
-  max-height: 250px;
+  max-height: 180px;
   overflow-y: scroll;
   padding-right: 10px;
-  cursor: pointer;
-}
-.bola__slick .item__description-text::-webkit-scrollbar-track {
-  background-color: #ffffff;
-  border: 5px solid #F4F4F4;
-  border-radius: 10px;
 }
 .bola__slick .item__description-text::-webkit-scrollbar {
-  background: #ffffff;
+  width: 7px;
+}
+.bola__slick .item__description-text::-webkit-scrollbar-track {
+  background: #FFF;
+  border-radius: 20px;
+  border: 2px solid #E8E8E8;
 }
 .bola__slick .item__description-text::-webkit-scrollbar-thumb {
-  background: rgb(196, 196, 196);
-  border: 5px solid #F4F4F4;
-  border-radius: 10px;
+  background-color: #222222;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .bola__slick .item__description-text {
+    display: none;
+  }
 }
 .bola__slick .item__description-text p {
   font-weight: 300;
@@ -1861,14 +1911,50 @@ html {
   color: #222222;
   text-align: justify;
 }
+.bola__slick .item__gomos {
+  position: relative;
+}
+.bola__slick .item__gomos .icon_pesquisa {
+  display: none;
+}
+@media (max-width: 767px) {
+  .bola__slick .item__gomos .icon_pesquisa {
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 30px;
+  }
+}
 .bola__slick .item__gomos-title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 30px;
+  line-height: 2.5rem;
   color: #222222;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .bola__slick .item__gomos-title {
+    justify-content: start;
+  }
+}
+.bola__slick .item__gomos .box-image__gomos {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+@media (max-width: 767px) {
+  .bola__slick .item__gomos .box-image__gomos {
+    display: none;
+  }
 }
 .bola__slick .item__gomos-img {
   max-width: 100%;
+  object-fit: contain;
 }
 .bola__nav {
   margin-top: 40px;
@@ -1909,6 +1995,25 @@ html {
   padding: 15px;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .timeline__slick .item__box {
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__box-image {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+  }
+}
+.timeline__slick .item__box .box-text_time {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .timeline__slick .item__boxfull {
   background: #FFF;
   border-radius: 15px;
@@ -1926,6 +2031,14 @@ html {
   margin: 8px 4px;
   padding: 15px;
 }
+.timeline__slick .item__boxhalf-box-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.timeline__slick .item__boxhalf-box-right .text-country {
+  margin-top: 40px;
+}
 .timeline__slick .item__campeao {
   background-color: #ECD39C;
 }
@@ -1933,9 +2046,10 @@ html {
   max-width: 100%;
 }
 .timeline__slick .item__campeao-subtitle {
-  font-weight: 400;
+  font-weight: 5 0;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1rem;
+  margin-bottom: 0;
   text-align: center;
   color: #222222;
 }
@@ -1958,15 +2072,45 @@ html {
 .timeline__slick .item__chuteira-img img {
   width: 100%;
 }
+.timeline__slick .item__chuteira-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8px;
+}
+.timeline__slick .item__chuteira-info h5 {
+  margin-bottom: 0px;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+.timeline__slick .item__chuteira-info h2 {
+  font-weight: 700;
+  font-size: 1.573rem;
+}
+.timeline__slick .item__chuteira-info .box-tags {
+  margin-top: 16px;
+}
+.timeline__slick .item__chuteira-info .box-tags span {
+  padding: 8px 10px;
+  background: #E4E4E4;
+  border-radius: 5px;
+}
 .timeline__slick .item__bola img {
   width: 100%;
 }
+.timeline__slick .item__bola-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  font-weight: 700;
+}
 .timeline__slick .item__country-subtitle {
-  font-weight: 325;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1rem;
   text-align: center;
   color: #222222;
+  margin-bottom: 0;
 }
 .timeline__slick .item__country-title {
   font-weight: bold;
@@ -1974,6 +2118,19 @@ html {
   line-height: 29px;
   text-align: center;
   color: #222222;
+}
+.timeline__slick .item__curiosidades-title {
+  position: relative;
+}
+.timeline__slick .item__curiosidades-title .title-mobile {
+  margin-bottom: 0;
+}
+.timeline__slick .item__curiosidades-title .icon_pesquisa {
+  width: 25px;
+  bottom: 50%;
+  transform: translateY(50%);
+  position: absolute;
+  right: 0;
 }
 
 .uniformes {
@@ -2141,6 +2298,11 @@ html {
   left: 0;
   animation: blue-down 8s linear infinite;
 }
+@media (min-width: 1400px) {
+  .c-trophies .container__trophies .row .img-box .trophie__blue {
+    left: 10%;
+  }
+}
 @keyframes blue-down {
   0% {
     transform: translateY(0);
@@ -2167,6 +2329,11 @@ html {
   bottom: 0;
   right: 10%;
   animation: green-up 8s linear infinite;
+}
+@media (min-width: 1400px) {
+  .c-trophies .container__trophies .row .img-box .trophie__green {
+    right: 15%;
+  }
 }
 @keyframes green-up {
   0% {

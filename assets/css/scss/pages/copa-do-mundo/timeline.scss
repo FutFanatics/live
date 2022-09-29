@@ -11,6 +11,27 @@
                 border-radius: 15px;
                 padding: 15px;
                 height: 100%;
+
+                @include for-phone-only{
+                    padding: 20px;
+                }
+                
+                &-image{
+                    @include for-phone-only{
+                        display: flex;
+                        padding: 20px;
+                        align-items: center;
+                    }
+                }
+                
+                .box-text_time{
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                
             }
             &__boxfull {
                 background: #FFF;
@@ -27,6 +48,16 @@
                     width: 50%;
                     margin: 8px 4px;
                     padding: 15px;
+
+                    &-right{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .text-country{
+                            margin-top: 40px;
+                        }
+                    }
                 }
             }
             &__campeao {
@@ -35,9 +66,10 @@
                     max-width: 100%;
                 }
                 &-subtitle {
-                    font-weight: 400;
+                    font-weight: 5  00;
                     font-size: 16px;
-                    line-height: 19px;
+                    line-height: 1rem;
+                    margin-bottom: 0;
                     text-align: center;
                     color: #222222;
                 }
@@ -65,29 +97,49 @@
                     }
                 }
                 &-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 8px;
                     h5 {
-
+                        margin-bottom: 0px;
+                        line-height: 1rem;
+                        font-size: 1rem;
                     }
                     h2 {
-
+                        font-weight: 700;
+                        font-size: 1.573rem;
                     }
-                    span {
-
+                    .box-tags{
+                        margin-top: 16px;
+                        span {
+                            padding: 8px 10px;
+                            background: #E4E4E4;
+                            border-radius: 5px;
+                        }
                     }
+                    
                 }
             }
             &__bola {
                 img {
                     width: 100%;
                 }
+                &-title{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 16px;
+                    font-weight: 700;
+                }
             }
             &__country {
                 &-subtitle {
-                    font-weight: 325;
-                    font-size: 14px;
-                    line-height: 17px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 1rem;
                     text-align: center;
                     color: #222222;
+                    margin-bottom: 0;
                 }
                 &-title {
                     font-weight: bold;
@@ -95,6 +147,19 @@
                     line-height: 29px;
                     text-align: center;
                     color: #222222;
+                }
+            }
+            &__curiosidades-title{
+                .title-mobile{
+                    margin-bottom: 0;
+                }
+                position: relative;
+                .icon_pesquisa{
+                    width: 25px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    position: absolute;
+                    right: 0;
                 }
             }
         }
