@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 .topo {
     background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/copa-do-mundo/1-bem-vindo/topo-desk.png');
     background-repeat: no-repeat;
@@ -38,11 +41,12 @@
     
     &__tags {
         flex-wrap: wrap;
-        span {
+        .btn-home {
             border: 1px solid #000;
             border-radius: 7px;
             padding: 5px;
             margin: 5px;
+            text-decoration: none;
             &:hover {
                 background-color: #000;
                 color: #FFF;
@@ -70,6 +74,27 @@
                 color: rgba(0, 0, 0, 0.5);
                 font-size: 40px;
                 text-align: center;
+                animation: down 2s infinite linear;
+
+                @keyframes down {
+                    0%{
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                    25%{
+                        transform: translateY(10px);
+                        opacity: 0.8;
+                    }
+                    50%{
+                        transform: translateY(15px);
+                        opacity: 0.5;
+                    }
+                    75%{
+                        transform:translateY(20px);
+                        opacity: 0.2;
+                    }
+
+                }
             }
         }
     }
