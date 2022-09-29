@@ -8,6 +8,7 @@
     &__slick {
         
         .item {
+            padding-right: 10px;
             &-img, &-img img {
                 width: 95%;
                 max-width: 658px;
@@ -31,6 +32,7 @@
                     font-size: 14px;
                     line-height: 170%;
                     color: black;
+                    padding-right: 10px;
                 }
             }
         }
