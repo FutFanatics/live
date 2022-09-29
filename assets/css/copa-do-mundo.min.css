@@ -1188,6 +1188,9 @@ html {
     padding: 20px 20px 50px 20px;
   }
 }
+.historia__slick .item {
+  padding-right: 10px;
+}
 .historia__slick .item-img, .historia__slick .item-img img {
   width: 95%;
   max-width: 658px;
@@ -1209,23 +1212,27 @@ html {
   max-height: 280px;
   overflow-y: scroll;
   padding: 4px;
+  cursor: pointer;
 }
 .historia__slick .item-description::-webkit-scrollbar-track {
   background-color: #ffffff;
+  border: 5px solid #F4F4F4;
+  border-radius: 10px;
 }
 .historia__slick .item-description::-webkit-scrollbar {
-  width: 6px;
   background: #ffffff;
 }
 .historia__slick .item-description::-webkit-scrollbar-thumb {
   background: rgb(196, 196, 196);
-  border-radius: 4px;
+  border: 5px solid #F4F4F4;
+  border-radius: 10px;
 }
 .historia__slick .item-description p {
   font-weight: 400;
   font-size: 14px;
   line-height: 170%;
   color: black;
+  padding-right: 10px;
 }
 .historia__slick .slick-dots {
   width: 41.66666667%;
@@ -1832,17 +1839,20 @@ html {
   max-height: 250px;
   overflow-y: scroll;
   padding-right: 10px;
+  cursor: pointer;
 }
 .bola__slick .item__description-text::-webkit-scrollbar-track {
   background-color: #ffffff;
+  border: 5px solid #F4F4F4;
+  border-radius: 10px;
 }
 .bola__slick .item__description-text::-webkit-scrollbar {
-  width: 6px;
   background: #ffffff;
 }
 .bola__slick .item__description-text::-webkit-scrollbar-thumb {
   background: rgb(196, 196, 196);
-  border-radius: 4px;
+  border: 5px solid #F4F4F4;
+  border-radius: 10px;
 }
 .bola__slick .item__description-text p {
   font-weight: 300;
