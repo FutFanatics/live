@@ -1,11 +1,17 @@
 .timeline {
     background: $color-primary;
-    padding: 50px 0;
+    padding: 60px 0;
+
+    .title-timeline{
+        font-weight: 700;
+        font-size: 34px;
+    }
     &__slick {
         .col-12 {
             padding: 4px;
         }
         .item {
+            padding: 10px;
             &__box {
                 background: #FFF;
                 border-radius: 15px;
@@ -25,11 +31,15 @@
                 }
                 
                 .box-text_time{
-                    width: 50%;
+                    
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+
+                    @include for-phone-only{
+                        width: 50%;
+                    }
                 }
                 
             }
@@ -52,7 +62,16 @@
                     &-right{
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: space-between;
+
+                        @include for-phone-only{
+                            justify-content: center;
+                        }
+
+                        img{
+                            margin-top: 16px;
+                            max-width: 100%;
+                        }
 
                         .text-country{
                             margin-top: 40px;
@@ -64,6 +83,11 @@
                 background-color: #ECD39C;
                 img {
                     max-width: 100%;
+
+                    @include for-phone-only{
+                        max-width: 150px;
+                    }
+
                 }
                 &-subtitle {
                     font-weight: 5  00;
@@ -91,7 +115,12 @@
                 }
             }
             &__chuteira {
+                
                 &-img {
+                    @include for-phone-only{
+                        max-width: 45%;
+                    }
+                    
                     img {
                         width: 100%;
                     }
@@ -100,11 +129,15 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    margin-left: 8px;
+                    @include for-phone-only{
+                        max-width: 55%;
+                    }
+                    
                     h5 {
                         margin-bottom: 0px;
                         line-height: 1rem;
                         font-size: 1rem;
+                        font-weight: 400;
                     }
                     h2 {
                         font-weight: 700;
@@ -112,10 +145,18 @@
                     }
                     .box-tags{
                         margin-top: 16px;
+
+                        @include for-phone-only{
+                            margin-top: 0;
+                        }
                         span {
                             padding: 8px 10px;
                             background: #E4E4E4;
                             border-radius: 5px;
+
+                            @include for-phone-only{
+                                padding: 8px 8px;
+                            }
                         }
                     }
                     
@@ -149,18 +190,99 @@
                     color: #222222;
                 }
             }
-            &__curiosidades-title{
-                .title-mobile{
-                    margin-bottom: 0;
+           
+            &__curiosidades{
+                
+                &-info{
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                    &.vice{
+                        background: #E0E0E0;
+                        margin-right: 8px;
+                    }
+                    .text-one{
+                        font-weight: 600;
+                        padding-right: 8px;
+                    }
+                    .text-country{
+                        background: #FFF;                            padding: 8px 10px;
+                        border-radius: 5px;
+                    }
+                    &.third{
+                        background-color: #D6B18E;
+                    }
+                    &.fourth{
+                        background-color: #E3E3E3;
+                        margin-top: 8px;
+                        margin-right: 8px;
+                        margin-bottom: 16px;
+                    }
+                    &.ouro{
+                        background-color: #ECD39C;
+                        margin-top: 8px;
+                        margin-bottom: 16px;
+                    }
                 }
-                position: relative;
-                .icon_pesquisa{
-                    width: 25px;
-                    bottom: 50%;
-                    transform: translateY(50%);
-                    position: absolute;
-                    right: 0;
+                &-title{
+                    margin-top: 8px;
+    
+                    @include for-phone-only{
+                        margin-top: 0;
+                    }
+                    .title{
+                        &-mobile{
+                            margin-bottom: 0;
+                        }
+                        &-desk{
+                            background-color: #B6B6B6;
+                            border-radius: 5px;
+                            padding: 10px 10px;
+                            font-size: 18px;
+                        }
+                    }
+                    
+    
+                    position: relative;
+                    .icon_pesquisa{
+                        width: 25px;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                        position: absolute;
+                        right: 0;
+                    }
                 }
+                &-description{
+                    max-height: 200px;
+                    overflow-y: scroll;
+                    padding-right: 8px;
+
+                    &::-webkit-scrollbar {
+                        width: 7px;
+                      }
+                      
+                      &::-webkit-scrollbar-track {
+                        background:#E8E8E8;   
+                        border-radius: 20px; 
+                        border: 2px solid  #FFF;
+                      }
+                      
+                      &::-webkit-scrollbar-thumb {
+                        background-color: #222222; 
+                        border-radius: 20px;
+                        
+                      }
+                    @include for-phone-only{
+                        display: none
+                    }
+                    .description{
+                        
+                        &-text{
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                            margin-bottom:0px;
+                        }
+                    }
+                }                
             }
         }
     }

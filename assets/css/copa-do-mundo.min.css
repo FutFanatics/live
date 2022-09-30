@@ -1745,7 +1745,7 @@ html {
 }
 .curiosidade__slick .item p {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 150%;
   color: #747474;
   padding: 0 20px;
@@ -1805,6 +1805,10 @@ html {
   .curiosidade-slick .item p b {
     font-weight: 900;
   }
+}
+.bola {
+  background-color: #FAFAFA;
+  padding: 40px 0px;
 }
 @media (max-width: 767px) {
   .bola {
@@ -1984,10 +1988,17 @@ html {
 
 .timeline {
   background: #E4E4E4;
-  padding: 50px 0;
+  padding: 60px 0;
+}
+.timeline .title-timeline {
+  font-weight: 700;
+  font-size: 34px;
 }
 .timeline__slick .col-12 {
   padding: 4px;
+}
+.timeline__slick .item {
+  padding: 10px;
 }
 .timeline__slick .item__box {
   background: #FFF;
@@ -2008,11 +2019,15 @@ html {
   }
 }
 .timeline__slick .item__box .box-text_time {
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__box .box-text_time {
+    width: 50%;
+  }
 }
 .timeline__slick .item__boxfull {
   background: #FFF;
@@ -2034,7 +2049,16 @@ html {
 .timeline__slick .item__boxhalf-box-right {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__boxhalf-box-right {
+    justify-content: center;
+  }
+}
+.timeline__slick .item__boxhalf-box-right img {
+  margin-top: 16px;
+  max-width: 100%;
 }
 .timeline__slick .item__boxhalf-box-right .text-country {
   margin-top: 40px;
@@ -2044,6 +2068,11 @@ html {
 }
 .timeline__slick .item__campeao img {
   max-width: 100%;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__campeao img {
+    max-width: 150px;
+  }
 }
 .timeline__slick .item__campeao-subtitle {
   font-weight: 5 0;
@@ -2069,6 +2098,11 @@ html {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
+@media (max-width: 767px) {
+  .timeline__slick .item__chuteira-img {
+    max-width: 45%;
+  }
+}
 .timeline__slick .item__chuteira-img img {
   width: 100%;
 }
@@ -2076,12 +2110,17 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 8px;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__chuteira-info {
+    max-width: 55%;
+  }
 }
 .timeline__slick .item__chuteira-info h5 {
   margin-bottom: 0px;
   line-height: 1rem;
   font-size: 1rem;
+  font-weight: 400;
 }
 .timeline__slick .item__chuteira-info h2 {
   font-weight: 700;
@@ -2090,10 +2129,20 @@ html {
 .timeline__slick .item__chuteira-info .box-tags {
   margin-top: 16px;
 }
+@media (max-width: 767px) {
+  .timeline__slick .item__chuteira-info .box-tags {
+    margin-top: 0;
+  }
+}
 .timeline__slick .item__chuteira-info .box-tags span {
   padding: 8px 10px;
   background: #E4E4E4;
   border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__chuteira-info .box-tags span {
+    padding: 8px 8px;
+  }
 }
 .timeline__slick .item__bola img {
   width: 100%;
@@ -2119,11 +2168,54 @@ html {
   text-align: center;
   color: #222222;
 }
+.timeline__slick .item__curiosidades-info {
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.timeline__slick .item__curiosidades-info.vice {
+  background: #E0E0E0;
+  margin-right: 8px;
+}
+.timeline__slick .item__curiosidades-info .text-one {
+  font-weight: 600;
+  padding-right: 8px;
+}
+.timeline__slick .item__curiosidades-info .text-country {
+  background: #FFF;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.timeline__slick .item__curiosidades-info.third {
+  background-color: #D6B18E;
+}
+.timeline__slick .item__curiosidades-info.fourth {
+  background-color: #E3E3E3;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+.timeline__slick .item__curiosidades-info.ouro {
+  background-color: #ECD39C;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
 .timeline__slick .item__curiosidades-title {
+  margin-top: 8px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__curiosidades-title {
+    margin-top: 0;
+  }
 }
 .timeline__slick .item__curiosidades-title .title-mobile {
   margin-bottom: 0;
+}
+.timeline__slick .item__curiosidades-title .title-desk {
+  background-color: #B6B6B6;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 18px;
 }
 .timeline__slick .item__curiosidades-title .icon_pesquisa {
   width: 25px;
@@ -2132,9 +2224,36 @@ html {
   position: absolute;
   right: 0;
 }
+.timeline__slick .item__curiosidades-description {
+  max-height: 200px;
+  overflow-y: scroll;
+  padding-right: 8px;
+}
+.timeline__slick .item__curiosidades-description::-webkit-scrollbar {
+  width: 7px;
+}
+.timeline__slick .item__curiosidades-description::-webkit-scrollbar-track {
+  background: #E8E8E8;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+}
+.timeline__slick .item__curiosidades-description::-webkit-scrollbar-thumb {
+  background-color: #222222;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__curiosidades-description {
+    display: none;
+  }
+}
+.timeline__slick .item__curiosidades-description .description-text {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 0px;
+}
 
 .uniformes {
-  padding: 60px 0 100px;
+  padding: 60px 0;
   background-color: #FFF;
 }
 .uniformes .title-uniforme {
@@ -2173,6 +2292,16 @@ html {
 .uniformes-slick .item-img img {
   width: 100%;
   border-radius: 10px;
+}
+.uniformes-slick .item .col-md-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .uniformes-slick .item .col-md-5 {
+    display: block;
+  }
 }
 .uniformes-slick .slick-dots {
   width: 41.66666667%;
@@ -2265,6 +2394,11 @@ html {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .c-trophies .container__trophies .row .box-text .trophies-text__title {
+    font-size: 28px;
+  }
 }
 .c-trophies .container__trophies .row .box-text .trophies-text__paragraph {
   font-size: 16px;

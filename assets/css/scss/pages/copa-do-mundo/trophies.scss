@@ -51,6 +51,10 @@
                         font-size: 25px;
                         font-weight: 600;
                         margin-bottom: 16px;
+
+                        @include for-phone-only{
+                            font-size: 28px;
+                        }
                     }
                     &__paragraph{
                         font-size: 16px;

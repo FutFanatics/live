@@ -12,6 +12,7 @@
 	var containerCuriosidade = $('.curiosidade-slick')
 	var containerBolas = $('.bola__slick')
 	var containerBolasNav = $('.bola__nav')
+	var containerTimeline = $('.timeline__slick')
 
 	containerHistoria.slick({
 		autoplay: false,
@@ -137,6 +138,19 @@
             }
         }]
     });
+
+	containerTimeline.slick({
+		autoplay: false,
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        arrows: false,
+        dots: false,
+		margin:8,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+	});
 
 
 

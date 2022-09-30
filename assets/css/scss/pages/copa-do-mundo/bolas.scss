@@ -1,4 +1,6 @@
 .bola {
+    background-color: #FAFAFA;
+    padding: 40px 0px;
     @include for-phone-only{
         background-color: #F4F4F4;
         padding-top: 40px;

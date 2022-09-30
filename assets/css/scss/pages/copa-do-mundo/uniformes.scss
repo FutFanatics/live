@@ -1,5 +1,5 @@
 .uniformes {
-    padding: 60px 0 100px;
+    padding: 60px 0;
     background-color: #FFF;
 
     .title-uniforme{
@@ -45,6 +45,15 @@
                 img {
                     width: 100%;
                     border-radius: 10px;
+                }
+            }
+            .col-md-5{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                @include for-phone-only{
+                    display: block;
                 }
             }
         }
