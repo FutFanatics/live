@@ -1996,9 +1996,24 @@ html {
 }
 .timeline__slick .col-12 {
   padding: 4px;
+  max-height: 415px;
+}
+@media (max-width: 767px) {
+  .timeline__slick .col-12 {
+    max-height: 100%;
+  }
 }
 .timeline__slick .item {
   padding: 10px;
+  max-height: 415px;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item {
+    max-height: 100%;
+  }
+}
+.timeline__slick .item .row {
+  height: 100%;
 }
 .timeline__slick .item__box {
   background: #FFF;
@@ -2045,6 +2060,10 @@ html {
   width: 50%;
   margin: 8px 4px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .timeline__slick .item__boxhalf-box-right {
   display: flex;
@@ -2056,8 +2075,13 @@ html {
     justify-content: center;
   }
 }
-.timeline__slick .item__boxhalf-box-right img {
+.timeline__slick .item__boxhalf-box-right figure {
   margin-top: 16px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.timeline__slick .item__boxhalf-box-right figure img {
+  object-fit: contain;
   max-width: 100%;
 }
 .timeline__slick .item__boxhalf-box-right .text-country {
@@ -2097,6 +2121,10 @@ html {
   padding: 5px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
+  margin-bottom: 8px;
+}
+.timeline__slick .item__chuteira-img {
+  max-width: 40%;
 }
 @media (max-width: 767px) {
   .timeline__slick .item__chuteira-img {
@@ -2110,6 +2138,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 60%;
 }
 @media (max-width: 767px) {
   .timeline__slick .item__chuteira-info {
@@ -2124,7 +2153,12 @@ html {
 }
 .timeline__slick .item__chuteira-info h2 {
   font-weight: 700;
-  font-size: 1.573rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .timeline__slick .item__chuteira-info h2 {
+    font-size: 1.25rem;
+  }
 }
 .timeline__slick .item__chuteira-info .box-tags {
   margin-top: 16px;
@@ -2135,23 +2169,21 @@ html {
   }
 }
 .timeline__slick .item__chuteira-info .box-tags span {
-  padding: 8px 10px;
+  padding: 8px;
   background: #E4E4E4;
   border-radius: 5px;
-}
-@media (max-width: 767px) {
-  .timeline__slick .item__chuteira-info .box-tags span {
-    padding: 8px 8px;
-  }
+  font-size: 14px;
 }
 .timeline__slick .item__bola img {
-  width: 100%;
+  max-width: 120px;
 }
 .timeline__slick .item__bola-title {
   display: flex;
   justify-content: center;
   margin-top: 16px;
+  text-align: center;
   font-weight: 700;
+  font-size: 1.25rem;
 }
 .timeline__slick .item__country-subtitle {
   font-weight: 400;
@@ -2163,14 +2195,20 @@ html {
 }
 .timeline__slick .item__country-title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 29px;
   text-align: center;
   color: #222222;
 }
 .timeline__slick .item__curiosidades-info {
-  padding: 8px 10px;
+  padding: 8px;
   border-radius: 5px;
+  font-size: 0.875rem;
+}
+@media (min-width: 1400px) {
+  .timeline__slick .item__curiosidades-info {
+    font-size: 1rem;
+  }
 }
 .timeline__slick .item__curiosidades-info.vice {
   background: #E0E0E0;
@@ -2182,8 +2220,14 @@ html {
 }
 .timeline__slick .item__curiosidades-info .text-country {
   background: #FFF;
-  padding: 8px 10px;
+  padding: 8px;
   border-radius: 5px;
+  font-size: 0.75rem;
+}
+@media (min-width: 1400px) {
+  .timeline__slick .item__curiosidades-info .text-country {
+    font-size: 1rem;
+  }
 }
 .timeline__slick .item__curiosidades-info.third {
   background-color: #D6B18E;
@@ -2225,7 +2269,7 @@ html {
   right: 0;
 }
 .timeline__slick .item__curiosidades-description {
-  max-height: 200px;
+  max-height: 150px;
   overflow-y: scroll;
   padding-right: 8px;
 }
@@ -2250,6 +2294,140 @@ html {
   font-size: 1rem;
   line-height: 1.6rem;
   margin-bottom: 0px;
+}
+.timeline__nav {
+  margin-top: 40px;
+  display: flex;
+  margin-bottom: 40px;
+}
+.timeline__nav .item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #727272;
+  text-align: center;
+  cursor: pointer;
+}
+.timeline__nav .slick-center .item {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+  line-height: 30px;
+}
+.timeline__nav .slick-prev {
+  left: 5px;
+}
+.timeline__nav .slick-next {
+  right: 5px;
+}
+
+.modal .modal-dialog {
+  margin: 1rem;
+}
+.modal .modal-content {
+  border-radius: 0.5rem;
+}
+.modal .modal-content .box-tags {
+  padding: 20px 16px 0px 16px;
+}
+.modal .modal-content .box-tags .item {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.modal .modal-content .box-tags .item_vice {
+  background: #E0E0E0;
+  width: 85%;
+}
+.modal .modal-content .box-tags .item_vice .text-one {
+  font-weight: 600;
+  padding-right: 8px;
+}
+.modal .modal-content .box-tags .item_vice .text-country {
+  background: #FFF;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.modal .modal-content .box-tags .item_third {
+  background-color: #D6B18E;
+  margin-right: 16px;
+}
+.modal .modal-content .box-tags .item_third .text-one {
+  font-weight: 600;
+  padding-right: 8px;
+}
+.modal .modal-content .box-tags .item_third .text-country {
+  background: #FFF;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.modal .modal-content .box-tags .item_fourth {
+  background-color: #E3E3E3;
+}
+.modal .modal-content .box-tags .item_fourth .text-one {
+  font-weight: 600;
+  padding-right: 8px;
+}
+.modal .modal-content .box-tags .item_fourth .text-country {
+  background: #FFF;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.modal .modal-content .box-tags .item_ouro {
+  background-color: #ECD39C;
+  width: 85%;
+}
+.modal .modal-content .box-tags .item_ouro .text-one {
+  font-weight: 600;
+  padding-right: 8px;
+}
+.modal .modal-content .box-tags .item_ouro .text-country {
+  background: #FFF;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.modal .modal-content .modal-body {
+  margin-bottom: 24px;
+}
+.modal .modal-content .modal-body .text_curiosidade {
+  background-color: #B6B6B6;
+  padding: 10px;
+  border-radius: 5px;
+}
+.modal .modal-content .modal-body .box_describe {
+  overflow: auto;
+  max-height: 250px;
+  padding-right: 10px;
+}
+.modal .modal-content .modal-body .box_describe .describe {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.modal .modal-content .modal-body .box_describe::-webkit-scrollbar {
+  width: 7px;
+}
+.modal .modal-content .modal-body .box_describe::-webkit-scrollbar-track {
+  background: #E8E8E8;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+}
+.modal .modal-content .modal-body .box_describe::-webkit-scrollbar-thumb {
+  background-color: #222222;
+  border-radius: 20px;
+}
+.modal .modal-content .modal-footer {
+  padding: 0px;
+  border: none;
+}
+.modal .modal-content .modal-footer .btn-fechar {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
 }
 
 .uniformes {

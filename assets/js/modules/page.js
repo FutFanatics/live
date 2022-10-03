@@ -13,6 +13,7 @@
 	var containerBolas = $('.bola__slick')
 	var containerBolasNav = $('.bola__nav')
 	var containerTimeline = $('.timeline__slick')
+	var containerTimelineNav = $('.timeline__nav')
 
 	containerHistoria.slick({
 		autoplay: false,
@@ -141,18 +142,37 @@
 
 	containerTimeline.slick({
 		autoplay: false,
+		asNavFor: '.timeline__nav',
         autoplaySpeed: 4000,
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
         dots: false,
-		margin:8,
         adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
 	});
+	
+	containerTimelineNav.slick({
+        centerMode: true,
+        asNavFor: '.timeline__slick',
+        slidesToShow: 11,
+        arrows: true,
+        dots: false,
+        focusOnSelect: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                slidesToShow: 1,
+            }
+        }]
+    });
 
-
+	
 
 	navArtilheiros.find('.item-option').on('click', function(){
 		var index = $(this).data('index');
@@ -205,3 +225,4 @@
     }
 
 })(jQuery);
+

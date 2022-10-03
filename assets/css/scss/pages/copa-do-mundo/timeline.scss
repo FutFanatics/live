@@ -9,9 +9,22 @@
     &__slick {
         .col-12 {
             padding: 4px;
+            max-height: 415px;
+
+            @include for-phone-only{
+                max-height: 100%;
+            }
         }
         .item {
             padding: 10px;
+            max-height: 415px;
+            @include for-phone-only{
+                max-height: 100%;
+            }
+            
+            .row{
+                height: 100%;
+            }
             &__box {
                 background: #FFF;
                 border-radius: 15px;
@@ -58,6 +71,10 @@
                     width: 50%;
                     margin: 8px 4px;
                     padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
                     &-right{
                         display: flex;
@@ -67,11 +84,16 @@
                         @include for-phone-only{
                             justify-content: center;
                         }
-
-                        img{
+                        figure{
                             margin-top: 16px;
-                            max-width: 100%;
-                        }
+                            width: 100%;
+                            margin-bottom: 0;
+
+                            img{
+                                object-fit: contain;
+                                max-width: 100%;
+                            }
+                        }                        
 
                         .text-country{
                             margin-top: 40px;
@@ -112,11 +134,14 @@
                     padding: 5px;
                     background: rgba(255, 255, 255, 0.5);
                     border-radius: 5px;
+                    margin-bottom: 8px;
                 }
             }
             &__chuteira {
                 
+                
                 &-img {
+                    max-width: 40%;
                     @include for-phone-only{
                         max-width: 45%;
                     }
@@ -129,6 +154,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    max-width: 60%;
                     @include for-phone-only{
                         max-width: 55%;
                     }
@@ -141,7 +167,11 @@
                     }
                     h2 {
                         font-weight: 700;
-                        font-size: 1.573rem;
+                        font-size: 1rem;
+                        
+                        @include for-phone-only{
+                            font-size: 1.25rem;
+                        }
                     }
                     .box-tags{
                         margin-top: 16px;
@@ -150,13 +180,10 @@
                             margin-top: 0;
                         }
                         span {
-                            padding: 8px 10px;
+                            padding: 8px ;
                             background: #E4E4E4;
                             border-radius: 5px;
-
-                            @include for-phone-only{
-                                padding: 8px 8px;
-                            }
+                            font-size: 14px;
                         }
                     }
                     
@@ -164,13 +191,15 @@
             }
             &__bola {
                 img {
-                    width: 100%;
+                    max-width: 120px;
                 }
                 &-title{
                     display: flex;
                     justify-content: center;
                     margin-top: 16px;
+                    text-align: center;
                     font-weight: 700;
+                    font-size: 1.25rem;
                 }
             }
             &__country {
@@ -184,7 +213,7 @@
                 }
                 &-title {
                     font-weight: bold;
-                    font-size: 24px;
+                    font-size: 22px;
                     line-height: 29px;
                     text-align: center;
                     color: #222222;
@@ -194,8 +223,13 @@
             &__curiosidades{
                 
                 &-info{
-                    padding: 8px 10px;
+                    padding: 8px;
                     border-radius: 5px;
+                    font-size: 0.875rem;
+
+                    @include lg{
+                        font-size: 1rem;
+                    }
                     &.vice{
                         background: #E0E0E0;
                         margin-right: 8px;
@@ -205,8 +239,13 @@
                         padding-right: 8px;
                     }
                     .text-country{
-                        background: #FFF;                            padding: 8px 10px;
+                        background: #FFF;                            padding: 8px;
                         border-radius: 5px;
+                        font-size: 0.75rem;
+
+                        @include lg{
+                            font-size: 1rem;
+                        }
                     }
                     &.third{
                         background-color: #D6B18E;
@@ -252,7 +291,7 @@
                     }
                 }
                 &-description{
-                    max-height: 200px;
+                    max-height: 150px;
                     overflow-y: scroll;
                     padding-right: 8px;
 
@@ -286,4 +325,148 @@
             }
         }
     }
+    &__nav{
+            margin-top: 40px;
+            display: flex;
+            margin-bottom: 40px;
+        .item {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #727272;
+                text-align: center;
+                cursor: pointer;
+        }
+        .slick-center {
+            .item {
+                font-size: 40px;
+                font-weight: bold;
+                color: #000;
+                line-height: 30px;
+            }
+        }
+        .slick-prev {
+            left: 5px;
+        }
+        .slick-next {
+            right: 5px;
+        }
+    } 
+    
+}
+.modal{
+    .modal-dialog{
+        margin: 1rem;
+    }
+    .modal-content{
+        border-radius: 0.5rem;
+        .box-tags{
+            padding: 20px 16px 0px 16px;
+            .item{
+                padding: 8px;
+                border-radius: 5px;
+                font-size: 1rem;
+                
+                &_vice{
+                    background: #E0E0E0;
+                    width: 85%;
+                    .text-one{
+                        font-weight: 600;
+                        padding-right: 8px;
+                    }
+                    .text-country{
+                        background: #FFF;                            padding: 8px;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        
+                    }    
+                }
+                &_third{
+                    background-color: #D6B18E; 
+                    margin-right: 16px;
+                    .text-one{
+                        font-weight: 600;
+                        padding-right: 8px;
+                    }
+                    .text-country{
+                        background: #FFF;                            padding: 8px;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        
+                    } 
+                }
+                &_fourth{
+                    background-color: #E3E3E3; 
+                    .text-one{
+                        font-weight: 600;
+                        padding-right: 8px;
+                    }
+                    .text-country{
+                        background: #FFF;                            padding: 8px;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        
+                    } 
+                }
+                &_ouro{
+                    background-color: #ECD39C;
+                    width: 85%;
+                    .text-one{
+                        font-weight: 600;
+                        padding-right: 8px;
+                    }
+                    .text-country{
+                        background: #FFF;                            padding: 8px;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                    }
+
+                }
+            }
+        }
+        .modal-body{
+            margin-bottom: 24px;
+            .text_curiosidade{
+                background-color: #B6B6B6;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .box_describe{
+                overflow: auto;
+                max-height: 250px;
+                padding-right: 10px;
+                .describe{
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                }
+                &::-webkit-scrollbar {
+                    width: 7px;
+                  }
+                  
+                  &::-webkit-scrollbar-track {
+                    background:#E8E8E8;   
+                    border-radius: 20px; 
+                    border: 2px solid  #FFF;
+                  }
+                  
+                  &::-webkit-scrollbar-thumb {
+                    background-color: #222222; 
+                    border-radius: 20px;
+                    
+                  }
+            }
+        }  
+        .modal-footer{
+            padding: 0px;
+            border: none;
+
+            .btn-fechar{
+                position: absolute;
+                left: 50%;
+                margin: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    
 }
