@@ -125,11 +125,11 @@
         centerMode: true,
         asNavFor: '.bola__slick',
         slidesToShow: 11,
-        arrows: true,
+        arrows: false,
         dots: false,
         focusOnSelect: true,
-        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+       // prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+       // nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
         responsive: [{
             breakpoint: 768,
             settings: {
@@ -157,11 +157,11 @@
         centerMode: true,
         asNavFor: '.timeline__slick',
         slidesToShow: 11,
-        arrows: true,
+        arrows: false,
         dots: false,
         focusOnSelect: true,
-        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+       // prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        //nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
         responsive: [{
             breakpoint: 768,
             settings: {

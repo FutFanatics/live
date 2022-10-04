@@ -2516,6 +2516,7 @@ html {
   .uniformes .title-uniforme {
     padding-left: 10px;
     margin-top: 0;
+    font-size: 30px;
   }
 }
 .uniformes-slick .item-title {
