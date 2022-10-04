@@ -74,6 +74,27 @@
             }
         }
     }
+    .slick-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+
+        .slick-prev, .slick-next{
+            background-color: transparent;
+            border: none;
+        }
+        .current{
+            color:#222222;
+            font-size: 35px;
+            font-weight: 800;
+        }
+        .total{
+            color: rgba(34, 34, 34, 0.5);
+            font-size: 25px;
+            font-weight: 500;
+        }
+    }
     @media (max-width: 800px) { 
         padding: 40px 0 70px;
 

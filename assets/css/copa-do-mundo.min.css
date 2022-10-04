@@ -1319,6 +1319,26 @@ html {
     color: #000;
   }
 }
+.historia .slick-nav_historia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.historia .slick-nav_historia .slick-prev, .historia .slick-nav_historia .slick-next {
+  background-color: transparent;
+  border: none;
+}
+.historia .slick-nav_historia .current {
+  color: #222222;
+  font-size: 35px;
+  font-weight: 800;
+}
+.historia .slick-nav_historia .total {
+  color: rgba(34, 34, 34, 0.5);
+  font-size: 25px;
+  font-weight: 500;
+}
 
 .campeoes {
   position: relative;
@@ -2563,6 +2583,26 @@ html {
 .uniformes-slick .slick-dots li.slick-active button {
   opacity: 0.7;
   width: 60px;
+}
+.uniformes .slick-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.uniformes .slick-nav .slick-prev, .uniformes .slick-nav .slick-next {
+  background-color: transparent;
+  border: none;
+}
+.uniformes .slick-nav .current {
+  color: #222222;
+  font-size: 35px;
+  font-weight: 800;
+}
+.uniformes .slick-nav .total {
+  color: rgba(34, 34, 34, 0.5);
+  font-size: 25px;
+  font-weight: 500;
 }
 @media (max-width: 800px) {
   .uniformes {
