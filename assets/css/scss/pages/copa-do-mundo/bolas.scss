@@ -161,3 +161,90 @@
         }
     } 
 }
+
+    .modal{
+        .modal-content{
+            min-height: 400px;
+            .modal-body{
+                .box-bola{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                    .box-header{
+                        .country{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                        }
+                        .name__ball{
+                            font-size: 1.875rem;
+                            font-weight: 800;
+                            line-height: 1.5rem;
+                            letter-spacing: 1px;
+                        }
+                        
+                    }
+                    .text__ball{
+                        font-size: 1.125rem;
+                        margin-top: 32px;
+                        margin-bottom: 16px;
+                        line-height: 1.8rem;
+                    }
+                }
+                .box-goma{
+                    display: none;
+                    padding-top: 16px;
+
+                    .goma{
+                        &__title{
+                            font-weight: 800;
+                            font-size: 30px;
+                            padding-left: 8px;
+                        }
+                        &__box-img{
+                            display: flex;
+                            width: 100%;
+                            min-height: 270px;
+                            justify-content: center;
+
+                            img{
+                                object-fit: contain;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+            .modal-footer{
+                .fechar{
+                    position: absolute;
+                    transform: translateX(-50%);
+                    left: 50%;
+                }
+                .next-modal{ 
+                    position: absolute;
+                    transform: translateX(-65%);
+                    left: 65%;
+                    display: none;
+
+                    &.active{
+                        display: block;
+                    }
+                }
+                .prev-modal{
+                    display: none;
+                    position: absolute;
+                    left: 35%;
+                    transform: translateX(-35%);
+
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }

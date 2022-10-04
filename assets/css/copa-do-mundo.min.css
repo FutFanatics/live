@@ -1986,6 +1986,77 @@ html {
   right: 5px;
 }
 
+.modal .modal-content {
+  min-height: 400px;
+}
+.modal .modal-content .modal-body .box-bola {
+  display: none;
+}
+.modal .modal-content .modal-body .box-bola.active {
+  display: block;
+}
+.modal .modal-content .modal-body .box-bola .box-header .country {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.modal .modal-content .modal-body .box-bola .box-header .name__ball {
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+.modal .modal-content .modal-body .box-bola .text__ball {
+  font-size: 1.125rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  line-height: 1.8rem;
+}
+.modal .modal-content .modal-body .box-goma {
+  display: none;
+  padding-top: 16px;
+}
+.modal .modal-content .modal-body .box-goma .goma__title {
+  font-weight: 800;
+  font-size: 30px;
+  padding-left: 8px;
+}
+.modal .modal-content .modal-body .box-goma .goma__box-img {
+  display: flex;
+  width: 100%;
+  min-height: 270px;
+  justify-content: center;
+}
+.modal .modal-content .modal-body .box-goma .goma__box-img img {
+  object-fit: contain;
+  width: 100%;
+}
+.modal .modal-content .modal-body .box-goma.active {
+  display: block;
+}
+.modal .modal-content .modal-footer .fechar {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.modal .modal-content .modal-footer .next-modal {
+  position: absolute;
+  transform: translateX(-65%);
+  left: 65%;
+  display: none;
+}
+.modal .modal-content .modal-footer .next-modal.active {
+  display: block;
+}
+.modal .modal-content .modal-footer .prev-modal {
+  display: none;
+  position: absolute;
+  left: 35%;
+  transform: translateX(-35%);
+}
+.modal .modal-content .modal-footer .prev-modal.active {
+  display: block;
+}
+
 .timeline {
   background: #E4E4E4;
   padding: 60px 0;
@@ -2337,7 +2408,7 @@ html {
 }
 .modal .modal-content .box-tags .item_vice {
   background: #E0E0E0;
-  width: 85%;
+  width: 100%;
 }
 .modal .modal-content .box-tags .item_vice .text-one {
   font-weight: 600;
@@ -2378,7 +2449,7 @@ html {
 }
 .modal .modal-content .box-tags .item_ouro {
   background-color: #ECD39C;
-  width: 85%;
+  width: 100%;
 }
 .modal .modal-content .box-tags .item_ouro .text-one {
   font-weight: 600;

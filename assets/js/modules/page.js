@@ -224,5 +224,55 @@
         }, 10);
     }
 
+	$('.icon_pesquisa').on('click', function(){
+
+		var modalId = $(this).attr('data-target');
+
+		if ($(this).hasClass('icon_gomo') == true) {
+			showBolaModal($(modalId), true);
+		} else {
+			showGomoModal($(modalId), true);
+		}
+	})	
+
+	$(".next-modal").click(function() {
+		showBolaModal($(this));
+	});
+
+	$(".prev-modal").click(function() {
+		showGomoModal($(this));
+	});
+
+	function showBolaModal($el, $parent = false) {
+		var $modal = $el.parents('.modal');
+
+		if ($parent) {
+			var $modal = $el;
+		} else {
+			var $modal = $el.parents('.modal');
+		}
+
+		console.log($modal);
+
+		$modal.find(".box-bola").removeClass('active');
+		$modal.find(".box-goma").addClass('active');
+		$modal.find(".next-modal").removeClass("active");
+		$modal.find(".prev-modal").addClass('active');
+	}
+
+	function showGomoModal($el, $parent = false) {
+		if ($parent) {
+			var $modal = $el;
+		} else {
+			var $modal = $el.parents('.modal');
+		}
+
+		console.log($modal);
+
+		$modal.find(".box-bola").addClass('active');
+		$modal.find(".box-goma").removeClass('active');
+		$modal.find(".prev-modal").removeClass('active');
+		$modal.find(".next-modal").addClass('active');
+	}
 })(jQuery);
 
