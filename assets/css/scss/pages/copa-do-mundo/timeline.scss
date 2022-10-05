@@ -306,7 +306,7 @@
                       }
                       
                       &::-webkit-scrollbar-thumb {
-                        background-color: #222222; 
+                        background-color: #919191; 
                         border-radius: 20px;
                         
                       }
@@ -324,18 +324,20 @@
                 }                
             }
         }
+        
     }
     &__nav{
-            margin-top: 40px;
-            display: flex;
-            margin-bottom: 40px;
+        padding: 40px 0 30px 0;
+        display: flex;
+        border-bottom: 1px dashed #3b3b3b;
+        
         .item {
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 17px;
-                color: #727272;
-                text-align: center;
-                cursor: pointer;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #727272;
+            text-align: center;
+            cursor: pointer;
         }
         .slick-center {
             .item {
@@ -350,6 +352,18 @@
         }
         .slick-next {
             right: 5px;
+        }
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 18px;
+            height: 18px;
+            bottom: -10px;
+            z-index: 5;
+            left: 50%;
+            background: url('/img/marcador.png');
+            background-repeat: no-repeat;
         }
     } 
     .timeline__nav{
@@ -372,6 +386,8 @@
             }
         }
     }
+
+    
     
 }
 .modal{
@@ -470,7 +486,7 @@
                   }
                   
                   &::-webkit-scrollbar-thumb {
-                    background-color: #222222; 
+                    background-color: #919191; 
                     border-radius: 20px;
                     
                   }

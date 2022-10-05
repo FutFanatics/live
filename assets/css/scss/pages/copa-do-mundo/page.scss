@@ -62,6 +62,10 @@ $color-secondary:#344A70;
 @mixin for-desktop-only {
     @media (min-width: 1200px) { @content; }
 }
+
+@mixin for-notebook-only {
+    @media (max-width: 1300px) { @content; }
+}
 @mixin lg {
     @media (min-width: 1400px) { @content; }
 }
