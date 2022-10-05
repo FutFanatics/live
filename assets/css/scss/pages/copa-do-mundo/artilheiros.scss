@@ -63,7 +63,7 @@
                 width: 100%;
 
                 @include for-phone-only{
-                    min-height: 350px;
+                    max-height: 350px;
                     width: auto;
                 }
                 

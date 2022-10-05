@@ -159,6 +159,25 @@
         .slick-next {
             right: 5px;
         }
+    }
+    .bola__nav{
+        .slick-next,.slick-prev{
+            border: none;
+            background-color: transparent;
+        }
+        .slick-next{
+            margin-left: 10px;
+            
+            @include for-phone-only{
+                margin-left: 0px;
+            }
+        }
+        .slick-prev{
+            margin-right: 10px;
+            @include for-phone-only{
+                margin-right: 0px;
+            }
+        }
     } 
 }
 
@@ -246,5 +265,6 @@
                     }
                 }
             }
+
         }
     }

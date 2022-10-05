@@ -34,10 +34,10 @@
 			settings: {
 			}
 			
-		}]
+			}]
 	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-        var current = currentSlide + 1;
-        $('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
+			var current = currentSlide + 1;
+			$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
     );
 
 	containerCuriosidade.slick({
@@ -91,11 +91,13 @@
 		autoplaySpeed: 4000,
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		arrows: false,
+		arrows: true,
 		dots: false,
 		adaptiveHeight: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		prevArrow: $('.slick-nav_uniforme').find('.slick-prev'),
+        nextArrow: $('.slick-nav_uniforme').find('.slick-next'),
 		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
 		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
 		responsive: [{
@@ -104,7 +106,10 @@
 			}
 			
 		}]
-	});
+		
+	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var current = currentSlide + 1;
+		$('.slick-nav_uniforme').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)});
 	
 
     containerBolas.slick({
@@ -129,17 +134,19 @@
         centerMode: true,
         asNavFor: '.bola__slick',
         slidesToShow: 11,
-        arrows: false,
+        arrows: true,
         dots: false,
         focusOnSelect: true,
-       // prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-       // nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
+		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
         responsive: [{
             breakpoint: 768,
             settings: {
                 arrows: true,
                 centerMode: true,
                 slidesToShow: 1,
+				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
+       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
             }
         }]
     });
@@ -161,17 +168,19 @@
         centerMode: true,
         asNavFor: '.timeline__slick',
         slidesToShow: 11,
-        arrows: false,
+        arrows: true,
         dots: false,
         focusOnSelect: true,
-       // prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-        //nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
+		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
         responsive: [{
             breakpoint: 768,
             settings: {
                 arrows: true,
                 centerMode: true,
                 slidesToShow: 1,
+				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
+       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
             }
         }]
     });
