@@ -2,16 +2,16 @@ html {
     scroll-behavior: smooth;
   }
 .topo {
-    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/copa-do-mundo/1-bem-vindo/topo-desk.png');
+    background-image: url('/img/1-bem-vindo/banner_home.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: #DBDBBF;
+    background-color: #d5cf9c;
     padding: 130px 0 150px 1px;
     @include for-phone-only {
         background-position: top;
         background-size: contain;
-        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/copa-do-mundo/1-bem-vindo/topo-mob.png');
+        background-image: url('/img/1-bem-vindo/banner_mob.png');
         padding: 40px 15px ;
     }
 
