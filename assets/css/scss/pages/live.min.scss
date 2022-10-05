@@ -1,0 +1,31 @@
+
+//sass --watch assets/css/scss/pages/live.min.scss:assets/css/live.min.css
+
+$vitrine-blue: #192C53;
+$vitrine-gray: #747474;
+
+@import "../_lib/progressive.css";
+
+@import "../components/reset-tray";
+
+@import "../fonts/icon.css"; 
+@import "../fonts/gotham-book";
+@import "../fonts/gotham-medium";
+@import "../fonts/gotham-bold";
+@import "../fonts/gotham-black";
+@import "../fonts/sporty";
+
+@import "../components/variables";
+
+// @import "live/page";
+// @import "live/topo";
+// @import "live/historia";
+// @import "live/campeoes";
+// @import "live/artilheiros";
+// @import "live/banners";
+// @import "live/curioridades";
+
+// @import "live/bolas";
+// @import "live/timeline";
+// @import "live/uniformes";
+// @import "live/trophies";

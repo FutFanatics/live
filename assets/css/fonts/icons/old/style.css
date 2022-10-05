@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?q20okg');
-  src:  url('fonts/icomoon.eot?q20okg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?q20okg') format('truetype'),
-    url('fonts/icomoon.woff?q20okg') format('woff'),
-    url('fonts/icomoon.svg?q20okg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?hyemmc');
+  src:  url('fonts/icomoon.eot?hyemmc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hyemmc') format('truetype'),
+    url('fonts/icomoon.woff?hyemmc') format('woff'),
+    url('fonts/icomoon.svg?hyemmc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -106,13 +106,13 @@
 .icon-facebook1:before {
   content: "\e966";
 }
-.icon-Hang-Loose:before {
+.icon-o-neill:before {
   content: "\e95f";
 }
-.icon-Onbongo:before {
+.icon-onbongo:before {
   content: "\e960";
 }
-.icon-Hurley:before {
+.icon-hurley:before {
   content: "\e961";
 }
 .icon-coca-cola-2:before {
