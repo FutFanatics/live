@@ -33,6 +33,40 @@
 			}
 			
 		}]
+	})
+	$('.page-time .slick4').each(function() {
+		var slider = $(this);
+	slider.slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: $(slider).siblings('.slick-nav').find('.slick-prev'),
+		nextArrow: $(slider).siblings('.slick-nav').find('.slick-next'),
+		responsive: [
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1,
+					// slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					// slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					// slidesToScroll: 3,
+				}
+			}
+		]
+		}).on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var current = currentSlide + 1;
+		$(slider).siblings('.slick-nav').find('.slick-numbers .current').html(current < 12 ? "0" + current : current)});
 	});
 
 	containerCuriosidade.slick({

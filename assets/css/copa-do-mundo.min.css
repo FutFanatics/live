@@ -1625,32 +1625,30 @@ html {
   justify-content: space-between;
   padding: 15px 30px;
   text-decoration: none;
-  background-color: #000;
-  color: #272727;
+  background-color: #891738;
+  color: #FFF;
 }
 .banners .banner-title span {
   font-weight: 500;
   color: #FFFFFF;
-  opacity: 0.5;
 }
 .banners .banner-title i {
   display: block;
   width: 24px;
   height: 24px;
   font-size: 28px;
-  color: #838383;
-  opacity: 0.5;
+  color: #FFFFFF;
   transform: rotate(-90deg);
 }
 .banners .banner-title:hover {
-  background-color: #FFF;
+  opacity: 0.9;
 }
 .banners .banner-title:hover span {
-  color: #272727;
+  color: #FFF;
   opacity: 1;
 }
 .banners .banner-title:hover i {
-  color: #000;
+  color: white;
 }
 
 @media (max-width: 800px) {
@@ -2584,22 +2582,22 @@ html {
   opacity: 0.7;
   width: 60px;
 }
-.uniformes .slick-nav {
+.uniformes .slick-nav_uniforme {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 32px;
 }
-.uniformes .slick-nav .slick-prev, .uniformes .slick-nav .slick-next {
+.uniformes .slick-nav_uniforme .slick-prev, .uniformes .slick-nav_uniforme .slick-next {
   background-color: transparent;
   border: none;
 }
-.uniformes .slick-nav .current {
+.uniformes .slick-nav_uniforme .current {
   color: #222222;
   font-size: 35px;
   font-weight: 800;
 }
-.uniformes .slick-nav .total {
+.uniformes .slick-nav_uniforme .total {
   color: rgba(34, 34, 34, 0.5);
   font-size: 25px;
   font-weight: 500;

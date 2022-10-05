@@ -34,32 +34,31 @@
             justify-content: space-between;
             padding: 15px 30px;
             text-decoration: none;
-            background-color: #000;
-            color: #272727;
+            background-color: #891738;
+            color: #FFF;
 
             span {
                 font-weight: 500;
                 color: #FFFFFF;
-                opacity: 0.5;
+                
             }
             i {
                 display: block;
                 width: 24px;
                 height: 24px;
                 font-size: 28px;
-                color: #838383;
-                opacity: 0.5;
+                color: #FFFFFF;                
                 transform: rotate(-90deg);
             }
             
             &:hover  {
-                background-color: #FFF;
+                opacity: 0.9;
                 span {
-                    color: #272727;
+                    color: #FFF;
                     opacity: 1;
                 }
                 i {
-                    color: #000;
+                    color: #FFFF;
                     
                 }
             }
