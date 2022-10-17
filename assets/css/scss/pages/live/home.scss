@@ -1,0 +1,132 @@
+*{
+
+    font-family: 'Gotham';
+}
+.c-home{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height:100vh;
+    background-color: #000;
+
+
+    @include for-phone-only{
+        height: calc(100vh - 120px);
+    }
+
+    img {
+        width: 100%;
+    }
+    &__stopwatch{
+        background-color: $color-text-primary;
+        height: 80px;
+        width: 100%;
+        z-index: 99;
+        position: relative;
+
+        .row__stopwatch{
+            height: 100%;
+        }
+
+        &-info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .number{
+                line-height: 1.5rem;
+                font-family: 'sporty';
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .describe{
+                font-size: 0.875rem;
+                text-transform: uppercase;  
+                font-family: 'Gotham';              
+            }
+
+            &::before{
+                position: absolute;
+                height: 30px;
+                width: 1px;
+                background: rgba(0, 0, 0 , 0.2);
+                content: '';
+                right: 0;
+            }
+        }
+    }
+    &-video {
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+        top: 50%;
+        display: block;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include for-phone-only{
+            margin-top: 40px;
+        }
+        &__desk{
+            @include for-phone-only{
+                display: none;
+            }
+        }
+
+    }
+    &-button {
+        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/down-arrow.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 25px;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+        display: block;
+        bottom: 40px;
+        transform: translate(-50%);
+        position: absolute;
+        left: 50%;
+    }
+
+    &-options {
+        position: absolute;
+        display: block;
+        bottom: 20px;
+        right: 20px;
+        button {
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px 25px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            opacity: 0.7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        @include for-phone-only{
+            bottom: 0;
+            top: 16%;
+            right: 10px;
+        }
+    }
+
+    &-replay {
+        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/icon-repeat.svg');
+        margin-right: 20px;
+    }
+    &-mute {
+        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/icon_no-sound.svg');
+    }
+
+}

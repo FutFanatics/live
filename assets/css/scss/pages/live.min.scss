@@ -8,7 +8,7 @@ $vitrine-gray: #747474;
 
 @import "../components/reset-tray";
 
-@import "../fonts/icon.css"; 
+@import "../fonts/icons-font";
 @import "../fonts/gotham-book";
 @import "../fonts/gotham-medium";
 @import "../fonts/gotham-bold";
@@ -16,15 +16,13 @@ $vitrine-gray: #747474;
 @import "../fonts/sporty";
 
 @import "../components/variables";
-
-// @import "live/page";
-// @import "live/topo";
-// @import "live/historia";
-// @import "live/campeoes";
-// @import "live/artilheiros";
-// @import "live/banners";
-// @import "live/curioridades";
-
+@import "live/media";
+@import "live/forms";
+@import "live/tech";
+@import "live/banner";
+@import "live/warm";
+@import "live/home";
+@import "live/enjoy";
 // @import "live/bolas";
 // @import "live/timeline";
 // @import "live/uniformes";

@@ -19,7 +19,24 @@ $footer-border-color: #52617E;
 
 $fw-light: 300;
 $fw-medium: 500;
+
 $fw-black: 900;
+
+
+
+
+
+@mixin for-phone-only {
+    @media (max-width: 767px) { @content; }
+}
+  
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; }
+}
+  
+@mixin md {
+    @media (min-width: 1200px) { @content; }
+}
 
 /** PAGE PALMEIRAS **/
 $green-light: #005F31;
@@ -28,3 +45,13 @@ $white: #FFFFFF;
 $golden-light: #ECC68E;
 $grey-light: #F6F8FA;
 $grey-dark: #7C7C7C;
+
+
+$color-text-primary:#00DF5E;
+$color-text-secondary:#FFFFFF;
+$color-text-third:#757575;
+
+$bg-primary:#000;
+$bg-secondary:#1B1B1B;
+
+

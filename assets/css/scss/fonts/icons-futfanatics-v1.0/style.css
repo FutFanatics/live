@@ -25,20 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-g360:before {
-  content: "\e914";
+.icon-whatsapp:before {
+  content: "\e963";
 }
-.icon-arrow-down-fill:before {
-  content: "\e915";
-}
-.icon-futcreator:before {
-  content: "\e913";
-}
-.icon-dropdown:before {
-  content: "\e912";
-}
-.icon-logo-fut:before {
-  content: "\e908";
+.icon-tiktok1:before {
+  content: "\e968";
 }
 .icon-atendimento:before {
   content: "\e900";
@@ -63,6 +54,9 @@
 }
 .icon-remove:before {
   content: "\e907";
+}
+.icon-logo-fut:before {
+  content: "\e908";
 }
 .icon-menu:before {
   content: "\e909";
@@ -91,20 +85,41 @@
 .icon-youtube:before {
   content: "\e911";
 }
-.icon-converse:before {
-  content: "\e95a";
+.icon-dropdown:before {
+  content: "\e912";
 }
-.icon-dray:before {
-  content: "\e95b";
+.icon-futcreator:before {
+  content: "\e913";
 }
-.icon-nicoboco:before {
-  content: "\e95c";
+.icon-g360:before {
+  content: "\e914";
 }
-.icon-oakley:before {
-  content: "\e95d";
+.icon-arrow-down-fill:before {
+  content: "\e915";
 }
-.icon-placar:before {
-  content: "\e95e";
+.icon-playstore:before {
+  content: "\e962";
+}
+.icon-apple:before {
+  content: "\e964";
+}
+.icon-cadastre-se:before {
+  content: "\e965";
+}
+.icon-facebook1:before {
+  content: "\e966";
+}
+.icon-o-neill:before {
+  content: "\e95f";
+}
+.icon-onbongo:before {
+  content: "\e960";
+}
+.icon-hurley:before {
+  content: "\e961";
+}
+.icon-coca-cola-2:before {
+  content: "\e967";
 }
 .icon-super-bolla:before {
   content: "\e944";
@@ -312,4 +327,19 @@
 }
 .icon-lock:before {
   content: "\f023";
+}
+.icon-nicoboco:before {
+  content: "\e95a";
+}
+.icon-converse:before {
+  content: "\e95b";
+}
+.icon-placar:before {
+  content: "\e95c";
+}
+.icon-oakley:before {
+  content: "\e95d";
+}
+.icon-dray:before {
+  content: "\e95e";
 }

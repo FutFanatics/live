@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
@@ -16,47 +16,344 @@
 			crossorigin="anonymous"
 		/>
     
-    <title>Copa do mundo</title>
+    <title>Black Fut</title>
   </head>
   <body class="copa-do-mundo">
      <!-- TOPO -->
-
-     <i class="icon-whatsapp"></i>
-
-
-
-     <section class="topo">
+    <section class="c-home">
+      <div class="c-home__stopwatch d-flex justify-content-center">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-5">
-                <h2>Bem-vindo ao almanaque da Copa do Mundo FIFA™</h2>
-                <p>Fala Fanático! Tudo bem? O momento mais esperado para todo fã de futebol está chegando. A Copa do Mundo do Qatar se aproxima e a Fut preparou um Almanaque da Copa do Mundo FIFA para você que é pirado por Copa como nós somos. Então confira a partir agora a história, curiosidades, estatísticas e muito mais sobre o maior torneio de futebol do mundo. </p>
-                <div class="d-flex topo__tags">
-                    <a class="btn-home" href="#historia">História</a>
-                    <a class="btn-home" href="#campeoes">seleções campeãs</a>
-                    <a class="btn-home" href="#curiosidades">curiosidades</a>
-                    <a class="btn-home" href="#artilheiros">artilheiros</a>
-                    <a class="btn-home" href="#camisas">Camisas marcantes</a>
-                    <a class="btn-home" href="#bolas">Bolas</a>
-                    <a class="btn-home" href="#linha">Linha do Tempo</a>
-                    <a class="btn-home" href="#trofeus">Troféu</a>
-                </div>
+          <div class="row row__stopwatch d-flex justify-content-center">
+            <div class="col-3 col-md-2 c-home__stopwatch-info">
+              <span class="number"  data-countdown-day="2022/11/25 00:00:00">
+              </span>
+              <span class="describe">
+                dia
+              </span>
             </div>
-            <div class="col-12 col-md-7"></div>
+            <div class="col-3 col-md-2 c-home__stopwatch-info">
+              <span class="number" data-countdown-hour="2022/11/25 00:00:00">
+              </span>
+              <span class="describe">
+                hora
+              </span>
+            </div>
+            <div class="col-3 col-md-2 c-home__stopwatch-info">
+              <span class="number" data-countdown-minute="2022/11/25 00:00:00">
+              </span>
+              <span class="describe">
+                minuto
+              </span>
+            </div>
+            <div class="col-3 col-md-2 c-home__stopwatch-info">
+              <span class="number" data-countdown-seconds="2022/11/25 00:00:00">
+              </span>
+              <span class="describe">
+                segundo
+              </span>
+            </div>
           </div>
-          <div class="topo__down">
-            <a href="#historia">
-              <i class="fas fa-angle-down"></i>
+        </div>
+      </div>
+      {% if utils.is_mobile %}
+            <video class="c-home-video" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_mob.jpg" >
+                <source src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/video-topo-mob.mp4" type="video/mp4">
+            </video>
+        {% else %}
+            <video class="c-home-video c-home-video__desk" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_desk.jpg" >
+                <source src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/video-topo-desk.mp4" type="video/mp4">
+            </video>
+        {% endif %}
+        
+        {# 
+          <div class="container-fluid">
+            <img class="d-none d-md-block" src="{{ asset(_context['settings']['topo_brao_desk']) }}" alt="Brasileirão 2022">
+            <img class="d-block d-md-none mx-auto" src="{{ asset(_context['settings']['topo_brao_mob']) }}" alt="Brasileirão 2022">
+        </div>
+    #}
+    <a href="#video" class="top-button d-none"></a>
+
+    <div class="c-home-options">
+        <button class="c-home-replay"></button>
+        <button class="c-home-mute"></button>
+    </div>
+    </section>
+    <section class="c-banner">
+      <div class="container">
+        <div class="row">
+          <div class="container-banner live live__1">
+          </div>
+          <div class=" container-banner--sm live live__2">
+          </div>
+          <div class=" container-banner--sm live live__3">
+          </div>
+          <div class="container-banner--sm live live__4">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="c-forms">
+      <div class="container">
+        <div class="forms-content">
+          <h1 class="forms__title">
+            Receba novidades exclusivas e <br class="d-none d-block"> 
+            fique por dentro do que vem por ai!
+          </h1>
+          <p class="forms__subtitle">* campos obrigatórios</p>
+          
+            <form action="/pagina-processa-dados-do-form" method="post">
+              <div class="row">
+                <div class="forms-input__text col-12 col-md-4">
+                  <input type="text" id="nome" placeholder="* Seu nome"></input>
+                </div>
+                <div class="forms-input__text col-12 col-md-4">
+                  <input type="text" id="email" placeholder="* Email"></input>
+                </div>
+                <div class="forms-input__text col-12 col-md-4">
+                  <input type="text" id="time" placeholder="* Time do coração">
+                </div>
+              </div>
+              <div class="row mt-3 mt-md-5">
+                <div class="forms-input__check col-12 col-md-7">
+                  <input type="checkbox" id="check" class="mb-5 mb-md-3">
+                  <p class="text-checkbox">
+                    Aceito receber informações sobre produtos e ofertas promocionais<br> especiais da FutFanatics por email. <a href="https://www.futfanatics.com.br/politica-de-privacidade" target="_blank">Política de Privacidade</a>
+                  </p>   
+                </div>
+                <div class="forms-input__send col-12 col-md-5 ">
+                  <input type="submit" value="Cadastre-se já">         
+                </div>
+              </div>              
+            </form>
+        </div>
+      </div>
+    </section>
+    <section class="c-enjoy">
+      <div class="container">
+        <div class="row box-content">
+          <div class="col-12 box-content__mobile d-flex d-md-none justify-content-center">
+            <img class="img-mobile" src="assets/img/img_mob.png">
+          </div>
+          <div class="col-12 col-md-6 box-content-text">
+            <h1 class="content__title">
+              Aproveite a Black <br class="d-none d-md-block">
+              também no app
+            </h1>
+            <p class="content__describe">
+              No aplicativo da Fut você também poderá contar com várias ofertas exclusivas. Instale o App em seu smartphone Android ou iOS antes do dia 23 de novembro, assim você não terá problemas na hora da compra. E atenção: no dia da Black Friday, verifique sua conexão com a internet e bateria do seu celular! Em dia de jogo, toda concentração e preparação é importante!
+            </p>
+            <div class="download-app d-flex justify-content-center justify-content-md-start align-items-center">
+              <img class="dowload-app__qr d-none d-md-block" src="/assets/img/qr__code.png">
+              <span class="download-text">Baixe o app</span>
+              <div class="download-box__icon">
+                <i class="icon-playstore icon" ></i>
+              </div>
+              <div class="download-box__icon download-box__icon-right">
+                <i class="icon-apple icon icon__apple" ></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 box-content-img d-none d-md-block">
+            <img class="img-phone" alt="" src="/assets/img/cel_aproveite.png">
+          </div>
+          <div class="col-12 col-md-1 box-content-platforms">
+            <a href="" class="platform">
+              <i class="icon-facebook1 platform-icon"></i>
+            </a>
+            <a href="" class="platform">
+              <i class="icon-instagram platform-icon"></i>
+            </a>
+            <a href="" class="platform">
+              <i class="icon-twitter platform-icon"></i>
+            </a>
+            <a href="" class="platform">
+              <i class="icon-youtube platform-icon"></i>
+            </a>
+            <a href="" class="platform">
+              <i class="icon-tiktok1 platform-icon"></i>
             </a>
           </div>
         </div>
+      </div>
     </section>
+    <section class="c-tech_advice">
+      <div class="container">
+        <div class="box-title d-flex justify-content-center flex-column flex-md-row align-items-center ">
+          <h1 class="tech-title">Conselhos</h1>
+          <h1 class="tech-title tech-title__green">Técnicos</h1>
+        </div>
+          <div class="row d-none d-md-flex">
+            <div class="col-12 col-md-3 card-tech">
+              <div class="box-card__title d-flex">
+                <img class="card__icon" src="/assets/img/icon__teste.svg">
+                <h1 class="card__title">
+                  Newsletter
+                </h1>
+              </div>
+              <div class="box-card__describe ">
+                <p class="text">
+                  Cadastre seu e-mail para receber as principais ofertas da Black Friday em primeira mão. Vai rolar também descontos exclusivos para assinantes da newsletter!
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 card-tech">
+              <div class="box-card__title d-flex">
+                <i class="icon-cadastre-se card__icon"></i>
+                <h1 class="card__title">
+                  Cadastre-se
+                </h1>
+              </div>
+              <div class="box-card__describe">
+                <p class="text">
+                  Não tem cadastro na Fut? Crie sua conta ainda hoje. Se você já possui, confira se seus dados estão atualizados. Isso é importante para poupar seu tempo no grande dia.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 card-tech">
+              <div class="box-card__title d-flex">
+                <i class="icon-cart card__icon"></i>
+                <h1 class="card__title">
+                  Carrinho
+                </h1>
+              </div>
+              <div class="box-card__describe">
+                <p class="text">
+                  Não marque bobeira! Finalize o seu pedido assim que colocá-lo no carrinho de compras. Não abandone seus produtos pois os estoques são limitados.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 card-tech">
+              <div class="box-card__title d-flex">
+                <i class="icon-frete card__icon"></i>
+                <h1 class="card__title">
+                  Pedido
+                </h1>
+              </div>
+              <div class="box-card__describe">
+                <p class="text">
+                  Fique tranquilo caso não consiga visualizar imediatamente na Central do Cliente, você receberá os e-mails de confirmação e etapas de envio em até 24 horas.
+                </p>
+              </div>
+            </div>
+          </div>
 
+        <!--slick mobile-->
+        <div class="tech__slick d-md-none">
+          <div class="item">
+            <div class="col-12 col-md-3 card-tech">
+                <div class="box-card__title d-flex justify-content-center">
+                  <img class="card__icon" src="/assets/img/icon__teste.svg">
+                  <h1 class="card__title">
+                  Newsletter
+                  </h1>
+                </div>
+                <div class="box-card__describe">
+                  <p class="text">
+                    Cadastre seu e-mail para receber as principais ofertas da Black Friday em primeira mão. Vai rolar também descontos exclusivos para assinantes da newsletter!
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-12 col-md-3 card-tech">
+                <div class="box-card__title d-flex justify-content-center">
+                  <i class="icon-cadastre-se card__icon"></i>
+                  <h1 class="card__title">
+                    Cadastre-se
+                  </h1>
+                </div>
+                <div class="box-card__describe">
+                  <p class="text">
+                    Não tem cadastro na Fut? Crie sua conta ainda hoje. Se você já possui, confira se seus dados estão atualizados. Isso é importante para poupar seu tempo no grande dia.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-12 col-md-3 card-tech">
+                <div class="box-card__title d-flex justify-content-center">
+                  <i class="icon-cart card__icon"></i>
+                  <h1 class="card__title">
+                    Carrinho
+                  </h1>
+                </div>
+                <div class="box-card__describe">
+                  <p class="text">
+                    Não marque bobeira! Finalize o seu pedido assim que colocá-lo no carrinho de compras. Não abandone seus produtos pois os estoques são limitados.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-12 col-md-3 card-tech">
+                <div class="box-card__title d-flex justify-content-center">
+                  <i class="icon-frete card__icon"></i>
+                  <h1 class="card__title">
+                    Pedido
+                  </h1>
+                </div>
+                <div class="box-card__describe">
+                  <p class="text">
+                    Fique tranquilo caso não consiga visualizar imediatamente na Central do Cliente, você receberá os e-mails de confirmação e etapas de envio em até 24 horas.
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="c-warm_cup">
+      <div class="container">
+        <div class="box_title d-flex justify-content-center">
+          <h1 class="title_warm">
+            Esquenta
+          </h1>
+          <h1 class="title_warm title_warm__green">
+            Copa
+          </h1>
+        </div>
+        
+          <div class="warm__slick">
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="assets/img/retangulo1.png">
+                <a href="" class="legend_card"><span>Brasil</span></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="assets/img/retangulo1.png">
+                <a href="" class="legend_card"><span>Alemanha</span></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="assets/img/retangulo1.png">
+                <a href="" class="legend_card"><span>frança</span></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="assets/img/retangulo1.png">
+                <a href="" class="legend_card"><span>Argentina</span></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="assets/img/retangulo1.png">
+                <a href="" class="legend_card"><span>uruguai</span></a>
+              </div>
+            </div>
+          </div>    
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <script src="assets/js/vendor/slick/slick.min.js"></script>
     <script src="assets/js/modules/page.js"></script>
     <script src="https://unpkg.com/progressive-image@1.2.0/dist/index.js"></script>
+    
 </body>
 </html>

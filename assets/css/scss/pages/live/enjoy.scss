@@ -1,0 +1,154 @@
+.c-enjoy{
+    background-color: $bg-primary;
+    padding: 80px 0px 60px 0px;
+
+    @include for-phone-only{
+        padding: 60px 0px;
+    }
+    .container{
+        border: 1px solid #00DF5E;
+        border-radius: 20px;
+
+        @include for-phone-only{
+            border: none;
+        }
+    
+        .box-content{
+            padding:60px;
+            align-items: center;
+
+            @include for-phone-only{
+                padding: 20px;
+            }
+            &__mobile{
+                max-height: 380px;
+
+                .img-mobile{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &-text{
+                .content{
+                    &__title{
+                        color: $color-text-secondary;
+                        font-weight: 800;
+                        font-size: 50px;
+                        font-family: Gotham;
+                        line-height: 3.5rem;
+
+                        @include for-phone-only{
+                            font-size: 40px;
+                            line-height: 3rem;
+                        }
+                    }
+                    &__describe{
+                        font-size: 1rem;
+                        color: $color-text-third;
+                        line-height: 1.5rem;
+                        margin-top: 2rem;
+
+                        @include for-phone-only{
+                            font-size: 1.275rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+                }
+            }
+
+            .download{
+                &-app{
+                    margin-top: 3rem;
+                }
+                &-text{
+                    background-color: $color-text-primary;
+                    color: #000;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    //letter-spacing: 1px;
+                    padding: 10px 25px;
+
+                    @include for-phone-only{
+                        padding: 10px 15px;
+                    }
+                }
+                &-box{
+                    &__icon{
+                        border: 1px solid $color-text-primary;
+                        padding: 10px 15px;
+                        display: flex;
+                        align-items: center;
+                        
+                        .icon{
+                            color: $color-text-primary;
+                            font-size: 28px;
+
+                            &__apple{
+                                font-size: 35px;
+                            }
+                        }
+
+                        &-right{
+                            border-left: none;
+                            padding: 6px 15px 7px 15px;
+                        }
+                    }
+                }
+            }
+            
+            &-img{
+                position: relative;
+                right: 5%;
+                top: -325px;
+                .img-phone{
+                  max-height: 660px;
+                  position: absolute;
+                }
+            }
+
+            &-platforms{
+                display: flex;
+                flex-direction: column;
+                margin-left: 32px;
+
+                @include for-phone-only{
+                    flex-direction: row;
+                    margin-left: 0;
+                    justify-content: center;
+                    margin-top: 32px;
+                }
+                .platform{
+                    border: 1px solid $color-text-third;
+                    background-color: #161616;
+                    border-radius: 10px;
+                    height: 50px;
+                    width: 50px;
+                    margin-bottom: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    
+                    &-icon{
+                       font-size: 30px;
+                       color:#757575;
+                    }
+
+                    @include for-phone-only{
+                        margin-bottom: 0px;
+                        margin-right: 12px;
+
+                        &:last-child{
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

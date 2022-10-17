@@ -1,0 +1,87 @@
+.c-tech_advice{
+    background-color: $bg-primary;
+    padding: 80px 0px 60px 0px;
+
+    @include for-phone-only{
+        padding: 60px 0px;
+    }
+
+    .container{
+        @include for-phone-only{
+            padding: 0px 20px;
+        }
+    }
+    .box-title{
+        width: 100%;
+        margin-bottom: 32px;
+
+        @include for-phone-only{
+            margin-bottom: 40px;
+        }
+
+        .tech-title{
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-text-secondary;
+            line-height: 3rem;
+
+            @include for-phone-only{
+                font-size: 40px;
+                line-height: 2.4rem;
+            }
+
+            &__green{
+                color: $color-text-primary;
+                padding-left: 8px;
+            }
+        }
+    }
+    .card-tech{
+        .box-card{
+            &__title{
+                align-items: center;
+
+                .icon-frete{
+                    font-size: 25px;
+                }
+                .card{
+                    &__icon{
+                        font-size: 23px;
+                        color: $color-text-third;
+                    }
+                    &__title{
+                        font-size: 1.275rem;
+                        color: $color-text-third;
+                        margin-left: 24px;
+                        margin-bottom: 0;
+                    }
+                }
+                
+            }
+            &__describe{
+                max-height: 300px;
+                margin-top: 16px;
+                padding-top: 24px;
+                border-top: 1px solid #757575;
+
+                .text{
+                    font-size: 1rem;
+                    color: #161616;
+                    font-family: "gotham";
+                    line-height: 1.5rem;
+
+                    @include for-phone-only{
+                        color: $color-text-third;
+                    }
+                }
+                &:hover{
+                    border-top: 1px solid $color-text-primary;
+                    
+                    .text{
+                        color: $color-text-third;
+                    }
+                }
+            }
+        }
+    }
+}

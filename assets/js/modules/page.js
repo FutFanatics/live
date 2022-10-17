@@ -1,200 +1,80 @@
+
 (function($){
 
 	// new Progressive({
 	// 	el: '.copa-do-mundo',
 	// 	lazyClass: 'lazy',
 	// }).fire();
+	var containerTech = $('.tech__slick')	
+	var containerWarm = $('.warm__slick')
 
-	var containerHistoria = $('.historia__slick')
-	var containerArtilheiros = $('.artilheiros-slick')
-	var navArtilheiros = $('.artilheiros-nav')
-	var containerUniformes = $('.uniformes-slick')
-	var containerCuriosidade = $('.curiosidade-slick')
-	var containerBolas = $('.bola__slick')
-	var containerBolasNav = $('.bola__nav')
-	var containerTimeline = $('.timeline__slick')
-	var containerTimelineNav = $('.timeline__nav')
-
-	containerHistoria.slick({
+    containerTech.slick({
 		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-        prevArrow: $('.slick-nav_historia').find('.slick-prev'),
-        nextArrow: $('.slick-nav_historia').find('.slick-next'),
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        arrows: false,
+        dots: false,
+        adaptiveHeight: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+	containerWarm.slick({
+		autoplay: false,
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        arrows: false,
+        dots: false,
+        adaptiveHeight: false,
+        slidesToShow: 5,
+
 		responsive: [{
 			breakpoint: 768,
 			settings: {
-			}
-			
-			}]
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-			var current = currentSlide + 1;
-			$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
-    );
-
-	containerCuriosidade.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: false,
-		dots: true,
-		adaptiveHeight: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		rows: 2,
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				rows: 1,
-                vertical: true,
-                verticalSwiping: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				centerMode: true,
+				adaptiveHeight: false,
+                vertical: false,
+                verticalSwiping: false,
                 
 			}
 		}]
-	});
-
-	containerArtilheiros.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: false,
-		dots: true,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-			}
-			
-		}]
-	});
-
-	containerUniformes.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: $('.slick-nav_uniforme').find('.slick-prev'),
-        nextArrow: $('.slick-nav_uniforme').find('.slick-next'),
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-			}
-			
-		}]
-		
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-		var current = currentSlide + 1;
-		$('.slick-nav_uniforme').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)});
-	
-
-    containerBolas.slick({
-        autoplay: false,
-        asNavFor: '.bola__nav',
-        autoplaySpeed: 4000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        arrows: false,
-        dots: false,
-        adaptiveHeight: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-            }
-            
-        }]
-    });
-    containerBolasNav.slick({
-        centerMode: true,
-        asNavFor: '.bola__slick',
-        slidesToShow: 11,
-        arrows: true,
-        dots: false,
-        focusOnSelect: true,
-		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: true,
-                centerMode: true,
-                slidesToShow: 1,
-				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
-            }
-        }]
-    });
-
-	containerTimeline.slick({
-		autoplay: false,
-		asNavFor: '.timeline__nav',
-        autoplaySpeed: 4000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        arrows: false,
-        dots: false,
-        adaptiveHeight: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-	});
-	
-	containerTimelineNav.slick({
-        centerMode: true,
-        asNavFor: '.timeline__slick',
-        slidesToShow: 11,
-        arrows: true,
-        dots: false,
-        focusOnSelect: true,
-		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: true,
-                centerMode: true,
-                slidesToShow: 1,
-				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
-            }
-        }]
-    });
+	})
 
 	
+	document.querySelector('.c-home-video').play();
 
-	navArtilheiros.find('.item-option').on('click', function(){
-		var index = $(this).data('index');
-		navArtilheiros.find('.item-option').each(function(i, el){
-			$(el).removeClass('item-active');
-		})
-		$(this).addClass('item-active')
-		containerArtilheiros.slick('slickGoTo', index);
+    $('.c-home-replay').on('click', function(){
+    	document.querySelector('.c-home-video').play();
+		document.querySelector('.c-home-video__desk').play();
 	});
+
+	$('.c-home-mute').on('click', function(){
+    	var muted = document.querySelector('.c-home-video').muted;
+		if (muted) {
+			document.querySelector('.c-home-video').muted = false;
+			$(this).css('background-image', "url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/icon_sound.svg')" );
+			$(this).css('background-position', "left center" );
+			$(this).css('background-size', "21px 21px" );
+		} else {
+			document.querySelector('.c-home-video').muted = true;
+			$(this).css('background-image', "url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/icon_no-sound.svg')" )
+            $(this).css('background-position', "center" );
+			$(this).css('background-size', "25px 25px" );
+        }
+	});
+
+	$('.c-home-button').on('click', function(){
+    	$('#videoLP').attr('src', $('#videoLP').attr('src') + '?autoplay=1');
+	});
+
+    $('.c-home-video').on('ended', function (e) {
+        $('.c-home-button').removeClass('d-none');
+    });
+
 
 	$('body').on('click', '.seemore-button', function(){
             
@@ -209,12 +89,28 @@
 		return false;
 	});
 
-	setInterval(function(){
-		new Progressive({
-			el: '.champions-league',
-			lazyClass: 'lazy',
-		}).fire();
-	}, 1000);
+	var now = new Date().getTime();
+	var live1 = new Date(2022,11,04).getTime();
+	var live2 = new Date(2022,11,11).getTime();
+	var live3 = new Date(2022,11,18).getTime();
+	var live4 = new Date(2022,11,25).getTime();
+
+	if(now>=live3){
+		$('.live__4').addClass('show');
+		$('.live__3').removeClass('show');
+
+	}else if(now<=live3 && now>live2){
+		console.log('live3');
+		$('.live__3').addClass('show');
+		$('.live__2').removeClass('show');
+	}else if(now<=live2 && now>live1){
+		console.log('live2')
+		$('.live__2').addClass('show');
+		$('.live__1').removeClass('show');
+	}else{
+	console.log('live1')
+	$('.live__1').addClass('show');
+	}
 
 	function multiSlideAdaptiveHeight(slider) {
 
@@ -228,64 +124,38 @@
             });
         
             activeSlides.forEach(function(item) {
-            	if (item > tallestSlide) {
-					tallestSlide = item;
-				}
+            if (item > tallestSlide) {
+				tallestSlide = item;
+			}
 			});
         
 			$('.slick-list', slider).height(tallestSlide);
         }, 10);
     }
 
-	$('.icon_pesquisa').on('click', function(){
-
-		var modalId = $(this).attr('data-target');
-
-		if ($(this).hasClass('icon_gomo') == true) {
-			showBolaModal($(modalId), true);
-		} else {
-			showGomoModal($(modalId), true);
-		}
-	})	
-
-	$(".next-modal").click(function() {
-		showBolaModal($(this));
-	});
-
-	$(".prev-modal").click(function() {
-		showGomoModal($(this));
-	});
-
-	function showBolaModal($el, $parent = false) {
-		var $modal = $el.parents('.modal');
-
-		if ($parent) {
-			var $modal = $el;
-		} else {
-			var $modal = $el.parents('.modal');
-		}
-
-		console.log($modal);
-
-		$modal.find(".box-bola").removeClass('active');
-		$modal.find(".box-goma").addClass('active');
-		$modal.find(".next-modal").removeClass("active");
-		$modal.find(".prev-modal").addClass('active');
-	}
-
-	function showGomoModal($el, $parent = false) {
-		if ($parent) {
-			var $modal = $el;
-		} else {
-			var $modal = $el.parents('.modal');
-		}
-
-		console.log($modal);
-
-		$modal.find(".box-bola").addClass('active');
-		$modal.find(".box-goma").removeClass('active');
-		$modal.find(".prev-modal").removeClass('active');
-		$modal.find(".next-modal").addClass('active');
-	}
+	$('[data-countdown-day]').each(function() {
+		var $this = $(this), finalDate = $(this).data('countdown-day');
+		$this.countdown(finalDate, function(event) {
+		  $this.html(event.strftime('%D')); 
+		});
+	  });
+	  $('[data-countdown-hour]').each(function() {
+		var $this = $(this), finalDate = $(this).data('countdown-hour');  
+		$this.countdown(finalDate, function(event) {
+		  $this.html(event.strftime('%H')); 
+		});
+	  });
+	  $('[data-countdown-minute]').each(function() {
+		var $this = $(this), finalDate = $(this).data('countdown-minute');  
+		$this.countdown(finalDate, function(event) {
+		  $this.html(event.strftime('%M')); 
+		});
+	  });
+	  $('[data-countdown-seconds]').each(function() {
+		var $this = $(this), finalDate = $(this).data('countdown-seconds');  
+		$this.countdown(finalDate, function(event) {
+		  $this.html(event.strftime('%S')); 
+		});
+	  });
 })(jQuery);
 

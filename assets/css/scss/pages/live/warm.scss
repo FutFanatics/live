@@ -1,0 +1,76 @@
+.c-warm_cup{
+    background-color: $bg-primary;
+    padding: 80px 0px 60px 0px;
+    .box_title{
+        .title_warm{
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-text-secondary;
+            line-height: 3rem;
+
+            @include for-phone-only{
+                font-size: 40px;
+                line-height: 2.4rem;
+            }
+
+            &__green{
+                color: $color-text-primary;
+                padding-left: 8px;
+            }
+        }
+    }
+    .warm__slick{
+        margin-top: 56px;
+
+        @include for-phone-only{
+            margin-top: 32px;
+        }
+    }    
+    .item{
+            padding-right: 8px;
+    }
+    .card{
+            border: 1px #262626 solid;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            flex: auto;
+            padding: 0;
+
+            &:hover{
+                .img_card{
+                    transform: scale(1.1);
+                    transition: 0.6s ease-in-out;
+
+                    @include for-phone-only{
+                        transform: none;
+                    }
+                }
+            }
+            
+
+            .legend_card{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 15px 30px;
+                text-decoration: none;
+                background-color: #000;
+                color: #FFF;
+                position: relative;
+
+                @include for-phone-only{
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                span{
+                    color: #fff;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+            }
+    }
+    
+}

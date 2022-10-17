@@ -1,0 +1,102 @@
+.c-banner{
+    background-color: $bg-primary;
+
+    .row{
+        position: relative;
+        top: -40px;
+        justify-content: center;
+
+        .live{
+            flex: 0 0 15%;
+            max-width: 15%;
+            border-radius: 10px;
+            background-size: contain;
+            height: 315px;
+            background-repeat: no-repeat;
+            background-image: url('../img/banner_testcolor.png');
+            filter: grayscale(1);
+            cursor: pointer;
+            
+
+            &:hover{
+                transform: scale(1.05);
+                transition:0.6s ease-in-out;
+                filter: none;
+                z-index: 2;
+            } 
+
+            &__1{
+                &.show{
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    background-image: url('../img/banner_home.png');
+                    background-size: contain;
+                    height: 315px;
+                    border-radius: 10px;
+                    filter: none;
+
+                    &:hover{
+                        transform: scale(1.05);
+                        transition:0.6s ease-in-out;
+                    }  
+                }
+            }
+            &__2{
+                &.show{
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    background-image: url('../img/banner_home.png');
+                    background-size: contain;
+                    height: 315px;
+                    border-radius: 10px;
+                    filter: none;
+
+                    &:hover{
+                        transform: scale(1.05);
+                        transition:0.6s ease-in-out;
+                    }  
+
+                }
+            }
+            &__3{
+                &.show{
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    background-image: url('../img/banner_home.png');
+                    background-size: contain;
+                    height: 315px;
+                    border-radius: 10px;
+                    filter: none;
+
+                    &:hover{
+                        transform: scale(1.05);
+                        transition:0.6s ease-in-out;
+                    }  
+                    
+                }
+            }
+            &__4{
+                &.show{
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    background-image: url('../img/banner_home.png');
+                    background-size: contain;
+                    height: 315px;
+                    border-radius: 10px;
+                    filter: none;
+
+                    &:hover{
+                        transform: scale(1.05);
+                        transition:0.6s ease-in-out;
+                    }  
+
+                }
+            }
+        }
+
+        .container-banner{
+            position: relative;
+        }
+    }
+} 
+
