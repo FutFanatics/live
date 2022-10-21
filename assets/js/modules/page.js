@@ -7,6 +7,7 @@
 	// }).fire();
 	var containerTech = $('.tech__slick')	
 	var containerWarm = $('.warm__slick')
+	var containerBanner = $('.slick__banner')
 
     containerTech.slick({
 		autoplay: false,
@@ -19,7 +20,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
     });
-
+	
 	containerWarm.slick({
 		autoplay: false,
         autoplaySpeed: 4000,
@@ -42,7 +43,19 @@
                 
 			}
 		}]
-	})
+	});
+	containerBanner.slick({
+		autoplay: false,
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        arrows: false,
+        dots: false,
+        adaptiveHeight: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
 
 	
 	document.querySelector('.c-home-video').play();

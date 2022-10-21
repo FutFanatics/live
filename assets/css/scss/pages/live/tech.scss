@@ -62,7 +62,16 @@
                 max-height: 300px;
                 margin-top: 16px;
                 padding-top: 24px;
-                border-top: 1px solid #757575;
+                position: relative;
+
+                &::before{
+                    position: absolute;
+                    width: 100%;
+                    background: #757575;
+                    height: 1px;
+                    content: '';
+                    top: 0;
+                }
 
                 .text{
                     font-size: 1rem;
@@ -74,12 +83,22 @@
                         color: $color-text-third;
                     }
                 }
-                &:hover{
-                    border-top: 1px solid $color-text-primary;
-                    
-                    .text{
-                        color: $color-text-third;
-                    }
+            }
+        }
+        &:hover{
+            .box-card__title{
+                .card__icon{
+                    color: $color-text-primary;
+                    fill: $color-text-primary;
+                }
+            }
+            .box-card__describe{
+                &::before{
+                    background-color:  $color-text-primary;
+                }
+                
+                .text{
+                    color: $color-text-third;
                 }
             }
         }

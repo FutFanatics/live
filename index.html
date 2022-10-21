@@ -80,7 +80,7 @@
     </section>
     <section class="c-banner">
       <div class="container">
-        <div class="row">
+        <div class="row d-none d-md-flex">
           <div class="container-banner live live__1">
           </div>
           <div class=" container-banner--sm live live__2">
@@ -88,6 +88,46 @@
           <div class=" container-banner--sm live live__3">
           </div>
           <div class="container-banner--sm live live__4">
+          </div>
+        </div>
+        <div class="row d-md-none">
+          <div class="slick__banner">
+            <div class="item">
+              <div class="container-banner-mobile">
+                <img class="banner-phone" src="assets/img/banner_1.png">
+              </div>
+            </div>
+            <div class="item">
+              <div class="container-banner-mobile">
+                <img class="banner-phone" src="assets/img/banner_2.png">
+              </div>
+            </div>
+            <div class="item">
+              <div class="container-banner-mobile">
+                <img class="banner-phone" src="assets/img/banner_3.png">
+              </div>
+            </div>
+            <div class="item">
+              <div class="container-banner">
+                <img class="banner-phone" src="assets/img/banner_4.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="options-shared w-100">
+        <div class="container d-flex justify-content-center align-items-center">
+          <span class="shared-text">Compartilhar</span>
+          <div class="shared-box d-flex justify-content-center">
+            <a class="icons" href="">
+              <i class="icon-facebook1 icon-face"></i>
+            </a>
+            <a class="icons" href="">
+              <i class="icon-instagram"></i>
+            </a>
+            <a class="icons" href="">
+              <i class="icon-whatsapp"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -145,12 +185,12 @@
             <div class="download-app d-flex justify-content-center justify-content-md-start align-items-center">
               <img class="dowload-app__qr d-none d-md-block" src="/assets/img/qr__code.png">
               <span class="download-text">Baixe o app</span>
-              <div class="download-box__icon">
+              <a class="download-box__icon" href="">
                 <i class="icon-playstore icon" ></i>
-              </div>
-              <div class="download-box__icon download-box__icon-right">
+              </a>
+              <a class="download-box__icon download-box__icon-right" href="">
                 <i class="icon-apple icon icon__apple" ></i>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-12 col-md-4 box-content-img d-none d-md-block">
@@ -185,7 +225,7 @@
           <div class="row d-none d-md-flex">
             <div class="col-12 col-md-3 card-tech">
               <div class="box-card__title d-flex">
-                <img class="card__icon" src="/assets/img/icon__teste.svg">
+                <i class="icon-cadastre-se card__icon"></i>
                 <h1 class="card__title">
                   Newsletter
                 </h1>
@@ -242,7 +282,7 @@
           <div class="item">
             <div class="col-12 col-md-3 card-tech">
                 <div class="box-card__title d-flex justify-content-center">
-                  <img class="card__icon" src="/assets/img/icon__teste.svg">
+                  <i class="icon-cadastre-se card__icon"></i>
                   <h1 class="card__title">
                   Newsletter
                   </h1>

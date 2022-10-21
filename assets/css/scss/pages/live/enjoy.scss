@@ -6,7 +6,7 @@
         padding: 60px 0px;
     }
     .container{
-        border: 1px solid #00DF5E;
+        border: 1px solid $color-text-primary;
         border-radius: 20px;
 
         @include for-phone-only{
@@ -80,6 +80,8 @@
                         padding: 10px 15px;
                         display: flex;
                         align-items: center;
+                        cursor: pointer;
+                        text-decoration: none;
                         
                         .icon{
                             color: $color-text-primary;
@@ -136,7 +138,7 @@
                     
                     &-icon{
                        font-size: 30px;
-                       color:#757575;
+                       color: $color-text-third;
                     }
 
                     @include for-phone-only{
@@ -145,6 +147,12 @@
 
                         &:last-child{
                             margin-right: 0px;
+                        }
+                    }
+                    &:hover{
+                        border: 1px solid $color-text-fourth;
+                        .platform-icon{
+                            color:$color-text-fourth;
                         }
                     }
                 }

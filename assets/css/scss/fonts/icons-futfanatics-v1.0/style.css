@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-mensage:before {
+  content: "\e969";
+}
 .icon-whatsapp:before {
   content: "\e963";
 }

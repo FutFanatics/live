@@ -24,7 +24,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  .icon-mensage:before {
+    content: "\e969";
+  }
   .icon-whatsapp:before {
     content: "\e963";
   }
@@ -109,17 +112,14 @@
   .icon-facebook1:before {
     content: "\e966";
   }
-  .icon-hang-loose:before {
-    content: "\e924";
+  .icon-o-neill:before {
+    content: "\e95f";
   }
   .icon-onbongo:before {
     content: "\e960";
   }
   .icon-hurley:before {
     content: "\e961";
-  }
-  .icon-o-neill:before {
-    content: "\e95f";
   }
   .icon-coca-cola-2:before {
     content: "\e967";

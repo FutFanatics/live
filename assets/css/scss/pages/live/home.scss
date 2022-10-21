@@ -6,7 +6,7 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    height:100vh;
+    height:calc(100vh - 60px);
     background-color: #000;
 
 
@@ -18,7 +18,7 @@
         width: 100%;
     }
     &__stopwatch{
-        background-color: $color-text-primary;
+        background-color: $bg-primary;
         height: 80px;
         width: 100%;
         z-index: 99;
@@ -39,18 +39,20 @@
                 font-family: 'sporty';
                 font-size: 1.5rem;
                 font-weight: 700;
+                color: $color-text-fourth;
             }
             .describe{
                 font-size: 0.875rem;
                 text-transform: uppercase;  
-                font-family: 'Gotham';              
+                font-family: 'Gotham';  
+                color: $color-text-fourth;            
             }
 
             &::before{
                 position: absolute;
                 height: 30px;
                 width: 1px;
-                background: rgba(0, 0, 0 , 0.2);
+                background:$color-text-fourth;
                 content: '';
                 right: 0;
             }

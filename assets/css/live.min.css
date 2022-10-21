@@ -1019,6 +1019,10 @@ html .botao-lancamento:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mensage:before {
+  content: "\e969";
+}
+
 .icon-whatsapp:before {
   content: "\e963";
 }
@@ -1579,7 +1583,7 @@ html .botao-lancamento:hover {
   }
 }
 .c-forms .forms-content .forms-input__send input {
-  background: #00DF5E;
+  background: #1E6200;
   border: none;
   padding: 10px 80px;
   display: flex;
@@ -1629,7 +1633,7 @@ html .botao-lancamento:hover {
   }
 }
 .c-tech_advice .box-title .tech-title__green {
-  color: #00DF5E;
+  color: #1E6200;
   padding-left: 8px;
 }
 .c-tech_advice .card-tech .box-card__title {
@@ -1652,7 +1656,15 @@ html .botao-lancamento:hover {
   max-height: 300px;
   margin-top: 16px;
   padding-top: 24px;
-  border-top: 1px solid #757575;
+  position: relative;
+}
+.c-tech_advice .card-tech .box-card__describe::before {
+  position: absolute;
+  width: 100%;
+  background: #757575;
+  height: 1px;
+  content: "";
+  top: 0;
 }
 .c-tech_advice .card-tech .box-card__describe .text {
   font-size: 1rem;
@@ -1665,10 +1677,14 @@ html .botao-lancamento:hover {
     color: #757575;
   }
 }
-.c-tech_advice .card-tech .box-card__describe:hover {
-  border-top: 1px solid #00DF5E;
+.c-tech_advice .card-tech:hover .box-card__title .card__icon {
+  color: #1E6200;
+  fill: #1E6200;
 }
-.c-tech_advice .card-tech .box-card__describe:hover .text {
+.c-tech_advice .card-tech:hover .box-card__describe::before {
+  background-color: #1E6200;
+}
+.c-tech_advice .card-tech:hover .box-card__describe .text {
   color: #757575;
 }
 
@@ -1697,6 +1713,9 @@ html .botao-lancamento:hover {
   filter: none;
   z-index: 2;
 }
+.c-banner .row .live__1 {
+  background-image: url("../img/banner_1.png");
+}
 .c-banner .row .live__1.show {
   max-width: 50%;
   flex: 0 0 50%;
@@ -1709,6 +1728,14 @@ html .botao-lancamento:hover {
 .c-banner .row .live__1.show:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
+}
+@media (max-width: 767px) {
+  .c-banner .row .live__1.show {
+    background-image: url("../img/banner_1.png");
+  }
+}
+.c-banner .row .live__2 {
+  background-image: url("../img/banner_2.png");
 }
 .c-banner .row .live__2.show {
   max-width: 50%;
@@ -1723,6 +1750,14 @@ html .botao-lancamento:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
 }
+@media (max-width: 767px) {
+  .c-banner .row .live__2.show {
+    background-image: url("../img/banner_1.png");
+  }
+}
+.c-banner .row .live__3 {
+  background-image: url("../img/banner_3.png");
+}
 .c-banner .row .live__3.show {
   max-width: 50%;
   flex: 0 0 50%;
@@ -1735,6 +1770,14 @@ html .botao-lancamento:hover {
 .c-banner .row .live__3.show:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
+}
+@media (max-width: 767px) {
+  .c-banner .row .live__3.show {
+    background-image: url("../img/banner_1.png");
+  }
+}
+.c-banner .row .live__4 {
+  background-image: url("../img/banner_4.png");
 }
 .c-banner .row .live__4.show {
   max-width: 50%;
@@ -1749,8 +1792,49 @@ html .botao-lancamento:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
 }
+@media (max-width: 767px) {
+  .c-banner .row .live__4.show {
+    background-image: url("../img/banner_1.png");
+  }
+}
 .c-banner .row .container-banner {
   position: relative;
+}
+.c-banner .row .container-banner-mobile {
+  width: 100%;
+}
+.c-banner .options-shared .shared-text {
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin-right: 16px;
+  font-weight: 450;
+  text-transform: uppercase;
+  color: #757575;
+}
+.c-banner .options-shared .shared-box .icons {
+  background-color: #161616;
+  border-radius: 6px;
+  border: 1px solid #757575;
+  margin: 0 8px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.c-banner .options-shared .shared-box .icons i {
+  font-size: 20px;
+  color: #757575;
+}
+.c-banner .options-shared .shared-box .icons .icon-face {
+  font-size: 18px;
+}
+.c-banner .options-shared .shared-box .icons:hover {
+  border: 1px solid #D7D7D7;
+}
+.c-banner .options-shared .shared-box .icons:hover i {
+  color: #D7D7D7;
 }
 
 .c-warm_cup {
@@ -1770,7 +1854,7 @@ html .botao-lancamento:hover {
   }
 }
 .c-warm_cup .box_title .title_warm__green {
-  color: #00DF5E;
+  color: #1E6200;
   padding-left: 8px;
 }
 .c-warm_cup .warm__slick {
@@ -1832,7 +1916,7 @@ html .botao-lancamento:hover {
   padding: 0;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-color: #000;
 }
 @media (max-width: 767px) {
@@ -1844,7 +1928,7 @@ html .botao-lancamento:hover {
   width: 100%;
 }
 .c-home__stopwatch {
-  background-color: #00DF5E;
+  background-color: #000;
   height: 80px;
   width: 100%;
   z-index: 99;
@@ -1864,17 +1948,19 @@ html .botao-lancamento:hover {
   font-family: "sporty";
   font-size: 1.5rem;
   font-weight: 700;
+  color: #D7D7D7;
 }
 .c-home__stopwatch-info .describe {
   font-size: 0.875rem;
   text-transform: uppercase;
   font-family: "Gotham";
+  color: #D7D7D7;
 }
 .c-home__stopwatch-info::before {
   position: absolute;
   height: 30px;
   width: 1px;
-  background: rgba(0, 0, 0, 0.2);
+  background: #D7D7D7;
   content: "";
   right: 0;
 }
@@ -1960,7 +2046,7 @@ html .botao-lancamento:hover {
   }
 }
 .c-enjoy .container {
-  border: 1px solid #00DF5E;
+  border: 1px solid #1E6200;
   border-radius: 20px;
 }
 @media (max-width: 767px) {
@@ -2013,7 +2099,7 @@ html .botao-lancamento:hover {
   margin-top: 3rem;
 }
 .c-enjoy .container .box-content .download-text {
-  background-color: #00DF5E;
+  background-color: #1E6200;
   color: #000;
   font-size: 20px;
   text-transform: uppercase;
@@ -2026,13 +2112,15 @@ html .botao-lancamento:hover {
   }
 }
 .c-enjoy .container .box-content .download-box__icon {
-  border: 1px solid #00DF5E;
+  border: 1px solid #1E6200;
   padding: 10px 15px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 .c-enjoy .container .box-content .download-box__icon .icon {
-  color: #00DF5E;
+  color: #1E6200;
   font-size: 28px;
 }
 .c-enjoy .container .box-content .download-box__icon .icon__apple {
@@ -2091,6 +2179,12 @@ html .botao-lancamento:hover {
   .c-enjoy .container .box-content-platforms .platform:last-child {
     margin-right: 0px;
   }
+}
+.c-enjoy .container .box-content-platforms .platform:hover {
+  border: 1px solid #D7D7D7;
+}
+.c-enjoy .container .box-content-platforms .platform:hover .platform-icon {
+  color: #D7D7D7;
 }
 
 /*# sourceMappingURL=live.min.css.map */
