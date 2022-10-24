@@ -1677,14 +1677,14 @@ html .botao-lancamento:hover {
     color: #757575;
   }
 }
-.c-tech_advice .card-tech:hover .box-card__title .card__icon {
+.c-tech_advice .card-tech:hover .box-card__title .card__icon, .c-tech_advice .card-tech.active .box-card__title .card__icon {
   color: #1E6200;
   fill: #1E6200;
 }
-.c-tech_advice .card-tech:hover .box-card__describe::before {
+.c-tech_advice .card-tech:hover .box-card__describe::before, .c-tech_advice .card-tech.active .box-card__describe::before {
   background-color: #1E6200;
 }
-.c-tech_advice .card-tech:hover .box-card__describe .text {
+.c-tech_advice .card-tech:hover .box-card__describe .text, .c-tech_advice .card-tech.active .box-card__describe .text {
   color: #757575;
 }
 

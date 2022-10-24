@@ -55,8 +55,18 @@
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+	var index = 0;
 
-
+	$('.c-tech_advice .card-tech').on('mouseenter',function(){
+		setInterval(function(){
+			if (index == 4) {
+				return;
+			}
+			console.log($('.c-tech_advice .card-tech')[index])
+			$($('.c-tech_advice .card-tech')[index]).addClass('active')
+			index++
+		},400)
+	});
 	
 	document.querySelector('.c-home-video').play();
 

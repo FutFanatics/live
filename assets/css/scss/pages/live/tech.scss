@@ -85,7 +85,7 @@
                 }
             }
         }
-        &:hover{
+        &:hover , &.active {
             .box-card__title{
                 .card__icon{
                     color: $color-text-primary;
