@@ -108,17 +108,28 @@
                 }
             }
         }
+    }
+    .container-banner{
+        position: relative;
 
-        .container-banner{
-            position: relative;
+        &-mobile{
+            width: 100%;
+            display: flex;
+            justify-content: center;
 
-            &-mobile{
-                width: 100%;
+            .banner-phone{
+                width: 70%;
+                object-fit: contain;
             }
         }
-
     }
+
     .options-shared{
+
+        @include for-phone-only{
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
         .shared{
             &-text{
                 font-size: 16px;
@@ -140,6 +151,11 @@
                     justify-content: center;
                     align-items: center;
                     text-decoration: none;
+
+
+                    &:last-child{
+                        margin-right: 0px;
+                    }
 
                     i{
                         font-size: 20px;

@@ -1797,11 +1797,23 @@ html .botao-lancamento:hover {
     background-image: url("../img/banner_1.png");
   }
 }
-.c-banner .row .container-banner {
+.c-banner .container-banner {
   position: relative;
 }
-.c-banner .row .container-banner-mobile {
+.c-banner .container-banner-mobile {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.c-banner .container-banner-mobile .banner-phone {
+  width: 70%;
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .c-banner .options-shared {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .c-banner .options-shared .shared-text {
   font-size: 16px;
@@ -1822,6 +1834,9 @@ html .botao-lancamento:hover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.c-banner .options-shared .shared-box .icons:last-child {
+  margin-right: 0px;
 }
 .c-banner .options-shared .shared-box .icons i {
   font-size: 20px;
