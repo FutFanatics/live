@@ -118,7 +118,7 @@
             justify-content: center;
 
             .banner-phone{
-                width: 70%;
+                max-width: 70%;
                 object-fit: contain;
             }
         }
@@ -127,7 +127,6 @@
     .options-shared{
 
         @include for-phone-only{
-            padding-top: 32px;
             padding-bottom: 32px;
         }
         .shared{
@@ -174,6 +173,12 @@
                     }
                 }
             }
+        }
+    }
+
+    .container{
+        &--slick{
+            top: -50px;
         }
     }
 } 
