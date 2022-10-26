@@ -112,7 +112,7 @@
 		return false;
 	});
 
-	var now = new Date().getTime();
+	var now = new Date(2022,11,18).getTime();
 	var live1 = new Date(2022,11,04).getTime();
 	var live2 = new Date(2022,11,11).getTime();
 	var live3 = new Date(2022,11,18).getTime();
@@ -120,15 +120,18 @@
 
 	if(now>=live3){
 		$('.live__4').addClass('show');
+		$('.live__4').addClass('order-first');
 		$('.live__3').removeClass('show');
 
 	}else if(now<=live3 && now>live2){
 		console.log('live3');
 		$('.live__3').addClass('show');
+		$('.live__3').addClass('order-first');
 		$('.live__2').removeClass('show');
 	}else if(now<=live2 && now>live1){
 		console.log('live2')
 		$('.live__2').addClass('show');
+		$('.live__2').addClass('order-first');
 		$('.live__1').removeClass('show');
 	}else{
 	console.log('live1')

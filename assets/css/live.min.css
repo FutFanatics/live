@@ -1701,7 +1701,7 @@ html .botao-lancamento:hover {
   max-width: 15%;
   border-radius: 10px;
   background-size: contain;
-  height: 315px;
+  max-height: 300px;
   background-repeat: no-repeat;
   background-image: url("../img/banner_testcolor.png");
   filter: grayscale(1);
@@ -1721,9 +1721,10 @@ html .botao-lancamento:hover {
   flex: 0 0 50%;
   background-image: url("../img/banner_home.png");
   background-size: contain;
-  height: 315px;
+  min-height: 300px;
   border-radius: 10px;
   filter: none;
+  margin-right: 10px;
 }
 .c-banner .row .live__1.show:hover {
   transform: scale(1.05);
@@ -1742,9 +1743,10 @@ html .botao-lancamento:hover {
   flex: 0 0 50%;
   background-image: url("../img/banner_home.png");
   background-size: contain;
-  height: 315px;
+  min-height: 300px;
   border-radius: 10px;
   filter: none;
+  margin-right: 10px;
 }
 .c-banner .row .live__2.show:hover {
   transform: scale(1.05);
@@ -1761,11 +1763,12 @@ html .botao-lancamento:hover {
 .c-banner .row .live__3.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner_home.png");
+  background-image: url("../img/banner__live_3.png");
   background-size: contain;
-  height: 315px;
+  min-height: 300px;
   border-radius: 10px;
   filter: none;
+  margin-right: 10px;
 }
 .c-banner .row .live__3.show:hover {
   transform: scale(1.05);
@@ -1782,11 +1785,12 @@ html .botao-lancamento:hover {
 .c-banner .row .live__4.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner_home.png");
+  background-image: url("../img/banner__live_4.png");
   background-size: contain;
-  height: 315px;
+  min-height: 300px;
   border-radius: 10px;
   filter: none;
+  margin-right: 10px;
 }
 .c-banner .row .live__4.show:hover {
   transform: scale(1.05);
