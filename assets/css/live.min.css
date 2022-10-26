@@ -1580,6 +1580,7 @@ html .botao-lancamento:hover {
 @media (max-width: 767px) {
   .c-forms .forms-content .forms-input__send {
     margin-top: 4rem;
+    justify-content: center;
   }
 }
 .c-forms .forms-content .forms-input__send input {
@@ -1675,6 +1676,7 @@ html .botao-lancamento:hover {
 @media (max-width: 767px) {
   .c-tech_advice .card-tech .box-card__describe .text {
     color: #757575;
+    text-align: center;
   }
 }
 .c-tech_advice .card-tech:hover .box-card__title .card__icon, .c-tech_advice .card-tech.active .box-card__title .card__icon {
@@ -2129,7 +2131,8 @@ html .botao-lancamento:hover {
 }
 @media (max-width: 767px) {
   .c-enjoy .container .box-content .download-text {
-    padding: 10px 15px;
+    padding: 12px 15px;
+    font-size: 18px;
   }
 }
 .c-enjoy .container .box-content .download-box__icon {
@@ -2157,8 +2160,10 @@ html .botao-lancamento:hover {
   top: -325px;
 }
 .c-enjoy .container .box-content-img .img-phone {
-  max-height: 660px;
+  max-height: 625px;
   position: absolute;
+  transform: rotate(5deg);
+  right: -20%;
 }
 .c-enjoy .container .box-content-platforms {
   display: flex;

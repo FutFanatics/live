@@ -55,22 +55,13 @@
           </div>
         </div>
       </div>
-      {% if utils.is_mobile %}
-            <video class="c-home-video" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_mob.jpg" >
+            <video class="c-home-video d-md-none" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_mob.jpg" >
                 <source src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/video-topo-mob.mp4" type="video/mp4">
             </video>
-        {% else %}
-            <video class="c-home-video c-home-video__desk" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_desk.jpg" >
+            <video class="c-home-video c-home-video__desk d-md-block d-none" autoplay muted poster="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/capa_desk.jpg" >
                 <source src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/brasileirao/topo/video-topo-desk.mp4" type="video/mp4">
             </video>
-        {% endif %}
-        
-        {# 
-          <div class="container-fluid">
-            <img class="d-none d-md-block" src="{{ asset(_context['settings']['topo_brao_desk']) }}" alt="Brasileirão 2022">
-            <img class="d-block d-md-none mx-auto" src="{{ asset(_context['settings']['topo_brao_mob']) }}" alt="Brasileirão 2022">
-        </div>
-    #}
+          
     <a href="#video" class="top-button d-none"></a>
 
     <div class="c-home-options">
@@ -115,14 +106,14 @@
           </div>
         </div>
       </div>
-      <div class="options-shared w-100">
+      <div class="options-shared w-100 pb-md-4">
         <div class="container d-flex justify-content-center align-items-center">
           <span class="shared-text">Compartilhar</span>
           <div class="shared-box d-flex justify-content-center">
             <a class="icons" href="">
               <i class="icon-facebook1 icon-face"></i>
             </a>
-            <a class="icons" href="">
+            <a class="icons" href="https://twitter.com/intent/tweet?text=Dia  De Outubro De  @israelerodolffo desembarcam em Pitanga-PR!;hashtags=EuVou,">
               <i class="icon-instagram"></i>
             </a>
             <a class="icons" href="">
@@ -185,11 +176,11 @@
             <div class="download-app d-flex justify-content-center justify-content-md-start align-items-center">
               <img class="dowload-app__qr d-none d-md-block" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/qr__code.png">
               <span class="download-text">Baixe o app</span>
-              <a class="download-box__icon" href="">
+              <a class="download-box__icon" href="https://play.google.com/store/apps/details?id=com.futfanatics" target="_blank">
                 <i class="icon-playstore icon" ></i>
               </a>
-              <a class="download-box__icon download-box__icon-right" href="">
-                <i class="icon-apple icon icon__apple" ></i>
+              <a class="download-box__icon download-box__icon-right" href="https://apps.apple.com/br/app/futfanatics/id1422835821">
+                <i class="icon-apple icon icon__apple" target="_blank"></i>
               </a>
             </div>
           </div>
@@ -197,19 +188,19 @@
             <img class="img-phone" alt="" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/cel_aproveite.png">
           </div>
           <div class="col-12 col-md-1 box-content-platforms">
-            <a href="" class="platform">
+            <a href="https://www.facebook.com/futfanatics" class="platform" target="_blank">
               <i class="icon-facebook1 platform-icon"></i>
             </a>
-            <a href="" class="platform">
+            <a href="https://www.instagram.com/futfanatics/" class="platform" target="_blank">
               <i class="icon-instagram platform-icon"></i>
             </a>
-            <a href="" class="platform">
+            <a href="https://twitter.com/futfanatics" class="platform" target="_blank">
               <i class="icon-twitter platform-icon"></i>
             </a>
-            <a href="" class="platform">
+            <a href="https://www.youtube.com/user/futfanaticsbr/videos" class="platform" target="_blank">
               <i class="icon-youtube platform-icon"></i>
             </a>
-            <a href="" class="platform">
+            <a href="https://www.tiktok.com/@futfanaticsoficial" class="platform" target="_blank">
               <i class="icon-tiktok1 platform-icon"></i>
             </a>
           </div>
@@ -369,19 +360,19 @@
             <div class="item">
               <div class="card col-12">
               <img class="img_card" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/retangulo1.png">
-                <a href="" class="legend_card"><span>frança</span></a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card col-12">
-              <img class="img_card" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/retangulo1.png">
                 <a href="" class="legend_card"><span>Argentina</span></a>
               </div>
             </div>
             <div class="item">
               <div class="card col-12">
               <img class="img_card" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/retangulo1.png">
-                <a href="" class="legend_card"><span>uruguai</span></a>
+                <a href="" class="legend_card"><span>Bélgica</span></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card col-12">
+              <img class="img_card" src="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/retangulo1.png">
+                <a href="" class="legend_card"><span>Espanha</span></a>
               </div>
             </div>
           </div>    

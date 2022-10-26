@@ -71,7 +71,8 @@
                     padding: 10px 25px;
 
                     @include for-phone-only{
-                        padding: 10px 15px;
+                        padding: 12px 15px;
+                        font-size: 18px;
                     }
                 }
                 &-box{
@@ -105,8 +106,10 @@
                 right: 5%;
                 top: -325px;
                 .img-phone{
-                  max-height: 660px;
-                  position: absolute;
+                    max-height: 625px;
+                    position: absolute;
+                    transform: rotate(5deg);
+                    right: -20%;
                 }
             }
 
