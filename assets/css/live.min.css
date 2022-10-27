@@ -2031,8 +2031,8 @@ a:hover {
 .c-home-options {
   position: absolute;
   display: block;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5%;
+  right: 2%;
 }
 .c-home-options button {
   width: 35px;
