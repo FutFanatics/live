@@ -1926,6 +1926,7 @@ a:hover {
   background-color: #000;
   color: #FFF;
   position: relative;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .c-warm_cup .card .legend_card {

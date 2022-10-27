@@ -68,6 +68,7 @@
                 background-color: #000;
                 color: #FFF;
                 position: relative;
+                text-transform: uppercase;
 
                 @include for-phone-only{
                     position: absolute;
