@@ -1690,6 +1690,10 @@ html .botao-lancamento:hover {
   color: #757575;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .c-banner {
   background-color: #000;
 }
@@ -1806,6 +1810,16 @@ html .botao-lancamento:hover {
   text-transform: uppercase;
   color: #757575;
 }
+@media (max-width: 767px) {
+  .c-banner .options-shared .shared-text {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .c-banner .options-shared .shared-box {
+    margin-top: 16px;
+  }
+}
 .c-banner .options-shared .shared-box .icons {
   background-color: #161616;
   border-radius: 6px;
@@ -1836,6 +1850,7 @@ html .botao-lancamento:hover {
 }
 .c-banner .container--slick {
   top: -50px;
+  margin-bottom: -30px;
 }
 
 .c-warm_cup {
@@ -1876,6 +1891,7 @@ html .botao-lancamento:hover {
   position: relative;
   flex: auto;
   padding: 0;
+  border-radius: 0;
 }
 .c-warm_cup .card .img_card {
   filter: grayscale(1);
