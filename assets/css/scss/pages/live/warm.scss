@@ -40,6 +40,10 @@
 
             .img_card{
                 filter: grayscale(1);
+
+                @include for-phone-only{
+                    filter: grayscale(0);
+                }
             }
 
             &:hover{

@@ -1896,6 +1896,11 @@ a:hover {
 .c-warm_cup .card .img_card {
   filter: grayscale(1);
 }
+@media (max-width: 767px) {
+  .c-warm_cup .card .img_card {
+    filter: grayscale(0);
+  }
+}
 .c-warm_cup .card:hover .img_card {
   transform: scale(1.1);
   transition: 0.6s ease-in-out;
