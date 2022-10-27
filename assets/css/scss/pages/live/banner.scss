@@ -119,11 +119,15 @@ a{
     }
 
     .options-shared{
+        &__live2, &__live3, &__live4 {
+            display: none;
+        }
 
         @include for-phone-only{
             padding-bottom: 32px;
         }
         .shared{
+            
             &-text{
                 font-size: 16px;
                 letter-spacing: 5px;
@@ -153,6 +157,9 @@ a{
                     align-items: center;
                     text-decoration: none;
 
+                    &:first-child{
+                        margin-left: 0;
+                    }
 
                     &:last-child{
                         margin-right: 0px;

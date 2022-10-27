@@ -1797,6 +1797,9 @@ a:hover {
 .c-banner .container-banner-mobile .banner-phone {
   object-fit: contain;
 }
+.c-banner .options-shared__live2, .c-banner .options-shared__live3, .c-banner .options-shared__live4 {
+  display: none;
+}
 @media (max-width: 767px) {
   .c-banner .options-shared {
     padding-bottom: 32px;
@@ -1831,6 +1834,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.c-banner .options-shared .shared-box .icons:first-child {
+  margin-left: 0;
 }
 .c-banner .options-shared .shared-box .icons:last-child {
   margin-right: 0px;
