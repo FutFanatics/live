@@ -1705,7 +1705,6 @@ html .botao-lancamento:hover {
   background-size: contain;
   max-height: 300px;
   background-repeat: no-repeat;
-  background-image: url("../img/banner_testcolor.png");
   filter: grayscale(1);
   cursor: pointer;
 }
@@ -1716,13 +1715,13 @@ html .botao-lancamento:hover {
   z-index: 2;
 }
 .c-banner .row .live__1 {
-  background-image: url("../img/banner_1.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__1min.png");
 }
 .c-banner .row .live__1.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner_home.png");
-  background-size: contain;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-1.png");
+  background-size: cover;
   min-height: 300px;
   border-radius: 10px;
   filter: none;
@@ -1732,19 +1731,14 @@ html .botao-lancamento:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
 }
-@media (max-width: 767px) {
-  .c-banner .row .live__1.show {
-    background-image: url("../img/banner_1.png");
-  }
-}
 .c-banner .row .live__2 {
-  background-image: url("../img/banner_2.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__2min.png");
 }
 .c-banner .row .live__2.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner_home.png");
-  background-size: contain;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-2.png");
+  background-size: cover;
   min-height: 300px;
   border-radius: 10px;
   filter: none;
@@ -1754,19 +1748,14 @@ html .botao-lancamento:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
 }
-@media (max-width: 767px) {
-  .c-banner .row .live__2.show {
-    background-image: url("../img/banner_1.png");
-  }
-}
 .c-banner .row .live__3 {
-  background-image: url("../img/banner_3.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__3min.png ");
 }
 .c-banner .row .live__3.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner__live_3.png");
-  background-size: contain;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-3.png");
+  background-size: cover;
   min-height: 300px;
   border-radius: 10px;
   filter: none;
@@ -1776,19 +1765,14 @@ html .botao-lancamento:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
 }
-@media (max-width: 767px) {
-  .c-banner .row .live__3.show {
-    background-image: url("../img/banner_1.png");
-  }
-}
 .c-banner .row .live__4 {
-  background-image: url("../img/banner_4.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__4min.png");
 }
 .c-banner .row .live__4.show {
   max-width: 50%;
   flex: 0 0 50%;
-  background-image: url("../img/banner__live_4.png");
-  background-size: contain;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-4.png");
+  background-size: cover;
   min-height: 300px;
   border-radius: 10px;
   filter: none;
@@ -1797,11 +1781,6 @@ html .botao-lancamento:hover {
 .c-banner .row .live__4.show:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
-}
-@media (max-width: 767px) {
-  .c-banner .row .live__4.show {
-    background-image: url("../img/banner_1.png");
-  }
 }
 .c-banner .container-banner {
   position: relative;
@@ -1812,7 +1791,6 @@ html .botao-lancamento:hover {
   justify-content: center;
 }
 .c-banner .container-banner-mobile .banner-phone {
-  max-width: 70%;
   object-fit: contain;
 }
 @media (max-width: 767px) {
@@ -1893,16 +1871,19 @@ html .botao-lancamento:hover {
 }
 .c-warm_cup .card {
   border: 1px #262626 solid;
-  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
   flex: auto;
   padding: 0;
 }
+.c-warm_cup .card .img_card {
+  filter: grayscale(1);
+}
 .c-warm_cup .card:hover .img_card {
   transform: scale(1.1);
   transition: 0.6s ease-in-out;
+  filter: grayscale(0);
 }
 @media (max-width: 767px) {
   .c-warm_cup .card:hover .img_card {
@@ -1944,7 +1925,7 @@ html .botao-lancamento:hover {
 }
 @media (max-width: 767px) {
   .c-home {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 160px);
   }
 }
 .c-home img {
@@ -1997,11 +1978,6 @@ html .botao-lancamento:hover {
   transform: translate(-50%, -50%);
 }
 @media (max-width: 767px) {
-  .c-home-video {
-    margin-top: 40px;
-  }
-}
-@media (max-width: 767px) {
   .c-home-video__desk {
     display: none;
   }
@@ -2047,8 +2023,8 @@ html .botao-lancamento:hover {
 @media (max-width: 767px) {
   .c-home-options {
     bottom: 0;
-    top: 16%;
-    right: 10px;
+    top: 18%;
+    right: 3%;
   }
 }
 .c-home-replay {

@@ -13,7 +13,6 @@
             background-size: contain;
             max-height: 300px;
             background-repeat: no-repeat;
-            background-image: url('../img/banner_testcolor.png');
             filter: grayscale(1);
             cursor: pointer;
             
@@ -26,12 +25,12 @@
             } 
 
             &__1{
-                background-image: url('../img/banner_1.png' );
+                background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__1min.png' );
                 &.show{
                     max-width: 50%;
                     flex: 0 0 50%;
-                    background-image: url('../img/banner_home.png');
-                    background-size: contain;
+                    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-1.png');
+                    background-size: cover;
                     min-height: 300px;
                     border-radius: 10px;
                     filter: none;
@@ -41,18 +40,15 @@
                         transform: scale(1.05);
                         transition:0.6s ease-in-out;
                     }  
-                    @include for-phone-only{
-                        background-image: url('../img/banner_1.png' );
-                    }
                 }
             }
             &__2{
-                background-image: url('../img/banner_2.png' );
+                background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__2min.png' );
                 &.show{
                     max-width: 50%;
                     flex: 0 0 50%;
-                    background-image: url('../img/banner_home.png');
-                    background-size: contain;
+                    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-2.png');
+                    background-size: cover;
                     min-height: 300px;
                     border-radius: 10px;
                     filter: none;
@@ -62,19 +58,15 @@
                         transform: scale(1.05);
                         transition:0.6s ease-in-out;
                     }  
-                    @include for-phone-only{
-                        background-image: url('../img/banner_1.png' );
-                    }
-
                 }
             }
             &__3{
-                background-image: url('../img/banner_3.png' );
+                background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__3min.png ');
                 &.show{
                     max-width: 50%;
                     flex: 0 0 50%;
-                    background-image: url('../img/banner__live_3.png');
-                    background-size: contain;
+                    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-3.png');
+                    background-size: cover;
                     min-height: 300px;
                     border-radius: 10px;
                     filter: none;
@@ -83,20 +75,16 @@
                     &:hover{
                         transform: scale(1.05);
                         transition:0.6s ease-in-out;
-                    }  
-                    @include for-phone-only{
-                        background-image: url('../img/banner_1.png' );
-                    }
-                    
+                    }                     
                 }
             }
             &__4{
-                background-image: url('../img/banner_4.png' );
+                background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.live__4min.png' );
                 &.show{
                     max-width: 50%;
                     flex: 0 0 50%;
-                    background-image: url('../img/banner__live_4.png');
-                    background-size: contain;
+                    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/live_shop/banners/d.banner__live-4.png');
+                    background-size: cover;
                     min-height: 300px;
                     border-radius: 10px;
                     filter: none;
@@ -106,9 +94,6 @@
                         transform: scale(1.05);
                         transition:0.6s ease-in-out;
                     }  
-                    @include for-phone-only{
-                        background-image: url('../img/banner_1.png' );
-                    }
                 }
             }
         }
@@ -122,7 +107,6 @@
             justify-content: center;
 
             .banner-phone{
-                max-width: 70%;
                 object-fit: contain;
             }
         }

@@ -118,7 +118,7 @@
 	var live3 = new Date(2022,11,18).getTime();
 	var live4 = new Date(2022,11,25).getTime();
 
-	if(now>=live3){
+	if(now>live3){
 		$('.live__4').addClass('show');
 		$('.live__4').addClass('order-first');
 		$('.live__3').removeClass('show');
