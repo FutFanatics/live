@@ -112,7 +112,7 @@
 		return false;
 	});
 
-	var now = new Date().getTime();
+	var now = new Date(2022,11,11).getTime();
 	var live1 = new Date(2022,11,04).getTime();
 	var live2 = new Date(2022,11,11).getTime();
 	var live3 = new Date(2022,11,18).getTime();
